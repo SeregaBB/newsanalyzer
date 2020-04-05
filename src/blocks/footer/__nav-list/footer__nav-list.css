@@ -1,0 +1,8 @@
+.footer__nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 104px 25px;
+    list-style: none;
+}

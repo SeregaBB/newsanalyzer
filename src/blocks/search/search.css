@@ -1,0 +1,7 @@
+.search {
+    background: url(../../images/background.png);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

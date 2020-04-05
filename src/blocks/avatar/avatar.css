@@ -1,0 +1,7 @@
+.avatar {
+    width: 460px;
+    height: 460px;
+    border-radius: 1000px;
+    background: url('../../images/ava.jpg');
+    margin: 0 56px 0;
+}

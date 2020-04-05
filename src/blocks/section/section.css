@@ -1,0 +1,7 @@
+@import url('__right-block/section__right-block.css');
+@import url('__title/section__title.css');
+@import url('__subtitle/section__subtitle.css');
+.section {
+    position: relative;
+    min-height: 282px;
+}
