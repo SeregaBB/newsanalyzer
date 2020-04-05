@@ -1,0 +1,19 @@
+.result__more {
+    background: #FFFFFF;
+    border-radius: 80px;
+    width: 288px;
+    padding: 20px 64px;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 80px;
+    outline: none;
+    cursor: pointer;
+}
+
+.result__more:hover {
+    background: #E8E8E9;
+}
