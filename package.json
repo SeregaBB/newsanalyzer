@@ -10,14 +10,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/SeregaBB/seregaBB.github.io.git"
+        "url": "git+https://github.com/SeregaBB/newsanalyzer.git"
     },
     "author": "Sergey Lysanov",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/SeregaBB/seregaBB.github.io/issues"
+        "url": "https://github.com/SeregaBB/newsanalyzer/issues"
     },
-    "homepage": "https://github.com/SeregaBB/seregaBB.github.io#readme",
+    "homepage": "https://github.com/SeregaBB/newsanalyzer.git#readme",
     "devDependencies": {
         "@babel/cli": "^7.8.4",
         "@babel/core": "^7.9.0",
