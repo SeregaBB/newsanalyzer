@@ -1,0 +1,4 @@
+.chart__container {
+    width: calc(100% - 104px);
+    margin: 0;
+}

@@ -1,0 +1,7 @@
+@import url('__go-home/analytics__go-home.css');
+@import url('__reference-info/analytics__reference-info.css');
+@import url('__week-info/analytics__week-info.css');
+.analytics {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}

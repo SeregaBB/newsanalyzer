@@ -1,0 +1,4 @@
+.header__nav-item_is-black-active {
+    color: #000;
+    border-bottom: 3px solid;
+}

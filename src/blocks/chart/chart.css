@@ -1,0 +1,16 @@
+@import url('__title/chart__title.css');
+@import url('__num-of-references/chart__num-of-references.css');
+@import url('__line/chart__line.css');
+@import url('__labels/chart__labels.css');
+@import url('__label/chart__label.css');
+@import url('__info-container/chart__info-container.css');
+@import url('__dates/chart__dates.css');
+@import url('__date/chart__date.css');
+@import url('__date-container/chart__date-container.css');
+@import url('__container/chart__container.css');
+@import url('__column/chart__column.css');
+@import url('__column-container/chart__column-container.css');
+@import url('__column-titles/chart__column-titles.css');
+.chart {
+    padding-bottom: 80px;
+}

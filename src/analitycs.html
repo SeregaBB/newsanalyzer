@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsAnalyzer | analytics</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <span class="header__logo">NewsAnalyzer</span>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="index.html" class="header__nav-link">Главная</a></li>
+                <li class="header__nav-item"><a href="about.html" class="header__nav-link">О проекте</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section analytics">
+        <div class="analytics__go-home"><a href="index.html" class="home__link"><strong>Главная</strong></a> / Аналитика</div>
+
+        <h2 class="section__title">Вы спросили: «Путешествия»</h2>
+
+        <p class="analytics__week-info">Новостей за неделю: <strong>34 324</strong></p>
+        <p class="analytics__reference-info">Упоминаний в загаловках: <strong>235</strong></p>
+
+    </section>
+
+
+    <section class="section section_color-grey chart">
+        <h2 class="chart__title">Аналитика по дням</h2>
+
+        <div class="chart__container">
+            <div class="chart__column-titles">
+                <h4 class="chart__dates">Дата <br>(август)</h4>
+                <h4 class="chart__num-of-references">Кол-во упоминаний</h4>
+            </div>
+            <hr class="chart__line">
+
+            <div class="chart__labels">
+                <p class="chart__label">0</p>
+                <p class="chart__label">25</p>
+                <p class="chart__label">50</p>
+                <p class="chart__label">75</p>
+                <p class="chart__label">100</p>
+            </div>
+
+            <div class="chart__info-container">
+                <div class="chart__date-container">
+                    <p class="chart__date">1, пн</p>
+                    <p class="chart__date">2, вт</p>
+                    <p class="chart__date">3, ср</p>
+                    <p class="chart__date">4, чт</p>
+                    <p class="chart__date">5, пт</p>
+                    <p class="chart__date">6, сб</p>
+                    <p class="chart__date">7, вс</p>
+                </div>
+
+                <div class="chart__column-container">
+                    <div class="chart__column" style="width:15%">15</div>
+                    <div class="chart__column" style="width:19%">19</div>
+                    <div class="chart__column" style="width:50%">50</div>
+                    <div class="chart__column" style="width:100%">100</div>
+                    <div class="chart__column" style="width:2%">2</div>
+                    <div class="chart__column" style="width:30%">30</div>
+                    <div class="chart__column" style="width:77%">77</div>
+                </div>
+            </div>
+            <div class="chart__labels">
+                <p class="chart__label">0</p>
+                <p class="chart__label">25</p>
+                <p class="chart__label">50</p>
+                <p class="chart__label">75</p>
+                <p class="chart__label">100</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <span class="copyright">&copy;2109 SergeyLysanov</span>
+        <nav class="footer__nav">
+            <ul class="footer__nav-list">
+                <li class="footer__nav-item">Главная</li>
+                <li class="footer__nav-item">О проекте</li>
+                <li class="footer__nav-item">Яндекс.Практикум</li>
+            </ul>
+        </nav>
+        <ul class="footer__socials">
+            <li class="footer__social-icon">vk</li>
+            <li class="footer__social-icon">tw</li>
+            <li class="footer__social-icon">fb</li>
+        </ul>
+    </footer>
+    <script src="<%= htmlWebpackPlugin.files.chunks.analitycs.entry %>"></script>
+</body>
+
+</html>

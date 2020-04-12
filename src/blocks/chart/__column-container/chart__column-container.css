@@ -1,0 +1,4 @@
+.chart__column-container {
+    width: calc(100% - 104px);
+    height: 100%;
+}

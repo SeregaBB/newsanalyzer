@@ -4,31 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Analyzer</title>
-    <link rel="stylesheet" href="pages/index.css">
-    <link rel="shortcut icon" href="images/a.png" type="image/x-icon">
+    <title>NewsAnalyzer</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 
 <body>
     <section class="section search">
-        <header class="header">
+        <header class="header header_margened header_color-white">
             <span class="header__logo">NewsAnalyzer</span>
             <nav class="header__nav">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item header__nav-item_is-active">Главная</li>
-                    <li class="header__nav-item">О проекте</li>
+                    <li class="header__nav-item header__nav-item_is-active header__nav-item_color-white"><a href="index.html" class="header__nav-link">Главная</a></li>
+                    <li class="header__nav-item header__nav-item_color-white"><a href="about.html" class="header__nav-link">О проекте</a></li>
                 </ul>
             </nav>
         </header>
 
-        <h1 class="title">Что в мире <br> творится?</h1>
-        <h3 class="subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в носотях за прошедшую неделю.</h2>
-            <div class="search-field">
-                <input type="text" class="search-field__input" placeholder="Введите тему новостей">
-                <button class="search-field__button">Искать</button>
-            </div>
+        <div class="search__text">
+            <h1 class="title">Что в мире творится?</h1>
+            <h2 class="subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h2>
+        </div>
+
+        <form class="search__form">
+            <input type="text" name="query" class="search__input" placeholder="Введите тему новости" required>
+            <button class="search__button" type="button">Найти</button>
+        </form>
+
+
+
     </section>
-    <section class="section result">
+
+
+    <section class="section section_color-grey section_no-padding section_item-position-center loading section_visibility-hidden">
+        <i class="preloader"></i>
+        <p class="loading__title">Идет поиск новостей...</p>
+    </section>
+
+    <section class="section section_color-grey section_no-padding section_item-position-center no-result section_visibility-hidden">
+        <img src="<%=require('../src/images/not-found.png').default%>" alt="Ничего не найдено" class="no-result__img">
+        <h2 class="no-result__title">Ничего не найдено</h2>
+        <h3 class="no-result__subtitle">К сожалению по вашему запросу ничего не найдено.</h3>
+    </section>
+
+    <section class="section section_color-grey result">
         <div class="result__searching" style="display: none">
             <i class="circle-preloader"></i>
             <h3 class="result__search">Идет поиск новостей...</h3>
@@ -36,12 +54,12 @@
 
         <div class="result__header">
             <h2 class="result__title">Результаты поиска</h2>
-            <a href="analitics.html" class="result__analitics">Посмотреть аналитику ></a>
+            <a href="analitycs.html" class="result__analitics">Посмотреть аналитику ></a>
         </div>
 
         <div class="result__cards">
             <div class="card">
-                <img src="images/background.png" alt="" class="card__image">
+                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
                 <div class="card__bottom">
                     <span class="card__date">2 августа, 2019</span>
                     <h2 class="card__title">Национальное достояние – парки</h2>
@@ -51,7 +69,7 @@
             </div>
 
             <div class="card">
-                <img src="images/background.png" alt="" class="card__image">
+                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
                 <div class="card__bottom">
                     <span class="card__date">2 августа, 2019</span>
                     <h2 class="card__title">Национальное достояние – парки</h2>
@@ -62,7 +80,39 @@
             </div>
 
             <div class="card">
-                <img src="images/background.png" alt="" class="card__image">
+                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
+                <div class="card__bottom">
+                    <span class="card__date">2 августа, 2019</span>
+                    <h2 class="card__title">Национальное достояние – парки</h2>
+                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="google.com" class="card__link">Google</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
+                <div class="card__bottom">
+                    <span class="card__date">2 августа, 2019</span>
+                    <h2 class="card__title">Национальное достояние – парки</h2>
+                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="google.com" class="card__link">Google</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
+                <div class="card__bottom">
+                    <span class="card__date">2 августа, 2019</span>
+                    <h2 class="card__title">Национальное достояние – парки</h2>
+                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="google.com" class="card__link">Google</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
                 <div class="card__bottom">
                     <span class="card__date">2 августа, 2019</span>
                     <h2 class="card__title">Национальное достояние – парки</h2>
@@ -75,30 +125,20 @@
         <button class="result__more">Показать еще</button>
     </section>
 
-    <section class="section no-result">
-        <img src="images/not-found.png" alt="" class="not-found-img">
-        <h2 class="no-result__title">Ничего не найдено</h2>
-        <h3 class="no-result__subtitle">К сожалению по вашему запросу ничего не найдено.</h3>
-    </section>
-
-
-
-
-
-    <section class="section about-author">
-        <div class="section__left-block">
-            <div class="avatar"></div>
-        </div>
-        <div class="section__right-block">
+    <section class="section section_item-position-flex author">
+        <div class="avatar"></div>
+        <div class="section__text-block">
             <h2 class="section__title">Об авторе</h2>
-            <h3 class="section__subtitle">
-                <p class="section__subtitle_margin-bottom">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
-                Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</h3>
+            <p class="section__subtitle">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
+            <p class="section__subtitle">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
         </div>
     </section>
+
+
+
 
     <footer class="footer">
-        <span class="copyright">&copy; 2020 NewsAnalyzer. SergeyLysanov</span>
+        <span class="copyright">&copy;2109 SergeyLysanov</span>
         <nav class="footer__nav">
             <ul class="footer__nav-list">
                 <li class="footer__nav-item">Главная</li>
@@ -106,17 +146,13 @@
                 <li class="footer__nav-item">Яндекс.Практикум</li>
             </ul>
         </nav>
-        <div class="socials">
-            <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9998 0.894775C5.41678 0.894775 0.894531 5.42322 0.894531 11C0.894531 15.4665 3.7915 19.2505 7.80507 20.5904C8.30754 20.6835 8.49364 20.3733 8.49364 20.1004C8.49364 19.8584 8.48744 19.2257 8.48123 18.382C5.67111 18.99 5.07559 17.0297 5.07559 17.0297C4.61654 15.8635 3.95278 15.5533 3.95278 15.5533C3.03469 14.9268 4.02102 14.9392 4.02102 14.9392C5.03217 15.0136 5.57186 15.9813 5.57186 15.9813C6.47135 17.526 7.93534 17.0793 8.51225 16.8188C8.6053 16.1674 8.86584 15.7208 9.15119 15.4665C6.90558 15.2121 4.54831 14.3436 4.54831 10.4728C4.54831 9.36856 4.93912 8.46907 5.59047 7.76189C5.48501 7.50755 5.13762 6.47779 5.68972 5.08824C5.68972 5.08824 6.53958 4.8153 8.46882 6.1242C9.27526 5.90088 10.1375 5.78922 10.9998 5.78302C11.8559 5.78922 12.7243 5.90088 13.5308 6.1242C15.46 4.8153 16.3099 5.08824 16.3099 5.08824C16.862 6.47779 16.5146 7.50755 16.4091 7.76189C17.0543 8.46907 17.4451 9.36856 17.4451 10.4728C17.4451 14.3561 15.0816 15.2059 12.8298 15.4602C13.1896 15.7704 13.5184 16.3908 13.5184 17.3337C13.5184 18.686 13.5059 19.7716 13.5059 20.1066C13.5059 20.3795 13.6858 20.6897 14.2007 20.5904C18.2143 19.2505 21.1051 15.4665 21.1051 11.0062C21.1051 5.42322 16.5828 0.894775 10.9998 0.894775Z" fill="#191717"/>
-                </svg>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.8958 0H1.10417C0.494167 0 0 0.494167 0 1.10417V18.8967C0 19.5058 0.494167 20 1.10417 20H10.6833V12.255H8.07667V9.23667H10.6833V7.01083C10.6833 4.4275 12.2608 3.02083 14.5658 3.02083C15.67 3.02083 16.6183 3.10333 16.895 3.14V5.84L15.2967 5.84083C14.0433 5.84083 13.8008 6.43667 13.8008 7.31V9.2375H16.79L16.4008 12.2558H13.8008V20H18.8975C19.5058 20 20 19.5058 20 18.8958V1.10417C20 0.494167 19.5058 0 18.8958 0V0Z" fill="black"/>
-                    </svg>
-
-        </div>
+        <ul class="footer__socials">
+            <li class="footer__social-icon">vk</li>
+            <li class="footer__social-icon">tw</li>
+            <li class="footer__social-icon">fb</li>
+        </ul>
     </footer>
-
+    <script type="module" src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 
 </html>

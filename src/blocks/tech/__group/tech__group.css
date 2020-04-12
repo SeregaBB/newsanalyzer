@@ -1,0 +1,8 @@
+.tech__group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 88px);
+    grid-column-gap: 72px;
+    align-self: baseline;
+    margin: 0 0 97px;
+    width: 45%;
+}

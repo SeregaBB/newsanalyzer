@@ -1,7 +1,9 @@
+@import url('__text/search__text.css');
+@import url('__form/search__form.css');
+@import url('__input/search__input.css');
+@import url('__button/search__button.css');
 .search {
-    background: url(../../images/background.png);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: url('../../images/background.png');
+    background-size: cover;
+    padding-bottom: 80px;
 }

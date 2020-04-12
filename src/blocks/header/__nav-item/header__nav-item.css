@@ -1,6 +1,20 @@
 .header__nav-item {
-    margin-right: 34px;
     padding-bottom: 26px;
-    color: #B6BCBF;
+    margin: 0 34px 0 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
     cursor: pointer;
+    color: #B6BCBF;
+    transition: color 0.2s linear;
+}
+
+.header__nav-item:last-child {
+    margin: 0;
+}
+
+.header__nav-item:hover {
+    color: #000;
 }

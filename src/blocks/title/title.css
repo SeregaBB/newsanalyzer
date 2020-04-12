@@ -1,9 +1,9 @@
 .title {
+    margin: 0 0 32px;
     font-family: Roboto Slab;
-font-style: normal;
-font-weight: normal;
-font-size: 60px;
-line-height: 64px;
-margin: 0 0 32px;
-width: 608px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 64px;
+    color: #fff;
 }

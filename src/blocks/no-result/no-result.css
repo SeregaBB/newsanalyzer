@@ -1,11 +1,3 @@
-@import url('../no-result/__title/no-result__title.css');
-@import url('../no-result/__subtitle/no-result__subtitle.css');
-.no-result {
-    position: relative;
-    background: #F5F6F7;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 85px;
-}
+@import url('__title/no-result__title.css');
+@import url('__subtitle/no-result__subtitle.css');
+@import url('__img/no-result__img.css');

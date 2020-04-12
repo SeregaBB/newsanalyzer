@@ -1,0 +1,7 @@
+.chart__labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 104px;
+    margin: 0 0 8px 0;
+}
