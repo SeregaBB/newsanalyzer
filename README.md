@@ -2,7 +2,7 @@
 ____
 
 ## Автор - Сергей Лысанов
-http://seregabb.github.io
+http://seregabb.github.io/newsanalyzer
 
 ____
 
