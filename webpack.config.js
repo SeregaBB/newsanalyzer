@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-const isDev = process.env.NODE_ENV === 'development';
+//const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
     entry: {
@@ -15,7 +15,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: '[name]/[name].[chunkhash].js'
     },
     module: {
         rules: [{
@@ -28,15 +28,16 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'postcss-loader'
+                    'postcss-loader',
+
                 ]
             },
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
                 use: [
-                    'file-loader?name=./images/[name].[ext]',
+                    'file-loader?name=/images/[name].[ext]',
                     {
                         loader: 'image-webpack-loader',
                         options: {}
@@ -45,13 +46,13 @@ module.exports = {
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./vendor/fonts/[name].[ext]'
+                loader: 'file-loader?name=/vendor/fonts/[name].[ext]'
             }
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: '[name]/style.[contenthash].css'
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
@@ -77,8 +78,6 @@ module.exports = {
             filename: 'analitycs.html',
         }),
         new WebpackMd5Hash(),
-        new webpack.DefinePlugin({
-            'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        })
+
     ]
 };

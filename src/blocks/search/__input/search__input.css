@@ -7,7 +7,21 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-    color: #B6BCBF;
+    color: #1a1b22;
     border: none;
     outline: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    border-radius: 100px;
+    transition: box-shadow .2s linear;
+}
+
+.search__input::placeholder {
+    color: #B6BCBF;
+}
+
+.search__input:focus {
+    box-shadow: 0 0 13px #2F71E5;
+    -webkit-box-shadow: 0 0 13px #2F71E5;
+    display: block;
 }
