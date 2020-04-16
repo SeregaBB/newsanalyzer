@@ -5,42 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewsAnalyzer</title>
-    <link rel="stylesheet" href="main/style.34da230ed144196f83a9.css">
+    <link rel="stylesheet" href="main/style.07c2a56eb573bf2c6a59.css">
 </head>
 
 <body>
     <section class="section search">
-        <header class="header header_margened header_color-white">
-            <span class="header__logo">NewsAnalyzer</span>
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item header__nav-item_is-active header__nav-item_color-white"><a href="index.html" class="header__nav-link">Главная</a></li>
-                    <li class="header__nav-item header__nav-item_color-white"><a href="about.html" class="header__nav-link">О проекте</a></li>
-                </ul>
-            </nav>
-        </header>
+        <header class="header header_color-white">
+            <div class="header__container">
+                <span class="header__logo">NewsAnalyzer</span>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item header__nav-item_is-active header__nav-item_color-white"><a href="index.html" class="header__nav-link">Главная</a></li>
+                        <li class="header__nav-item header__nav-item_color-white"><a href="about.html" class="header__nav-link">О проекте</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-        <div class="search__text">
-            <h1 class="title">Что в мире творится?</h1>
-            <h2 class="subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h2>
+        </header>
+        <div class="search__wrapper">
+            <div class="search__text">
+                <h1 class="title">Что в мире творится?</h1>
+                <h2 class="subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h2>
+            </div>
+
+            <form class="search__form">
+                <input type="text" name="query" class="search__input" placeholder="Введите тему новости" required>
+                <button class="search__button" type="button">Найти</button>
+            </form>
         </div>
 
-        <form class="search__form">
-            <input type="text" name="query" class="search__input" placeholder="Введите тему новости" required>
-            <button class="search__button" type="button">Найти</button>
-        </form>
 
 
 
     </section>
 
 
-    <section class="section section_color-grey section_no-padding section_item-position-center loading section_visibility-hidden">
+    <section class="section section_color-grey section_item-position-center loading section_visibility-hidden">
         <i class="preloader"></i>
         <p class="loading__title">Идет поиск новостей...</p>
     </section>
 
-    <section class="section section_color-grey section_no-padding section_item-position-center no-result section_visibility-hidden">
+    <section class="section section_color-grey section_item-position-center no-result section_visibility-hidden">
         <img src="images/not-found.png" alt="Ничего не найдено" class="no-result__img">
         <h2 class="no-result__title">Ничего не найдено</h2>
         <h3 class="no-result__subtitle">К сожалению по вашему запросу ничего не найдено.</h3>
@@ -141,15 +146,17 @@
         <span class="copyright">&copy;2109 SergeyLysanov</span>
         <nav class="footer__nav">
             <ul class="footer__nav-list">
-                <li class="footer__nav-item">Главная</li>
-                <li class="footer__nav-item">О проекте</li>
-                <li class="footer__nav-item">Яндекс.Практикум</li>
+                <li class="footer__nav-item"><a class="footer__nav-link">Главная</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link">О проекте</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link">Яндекс.Практикум</a></li>
             </ul>
         </nav>
         <ul class="footer__socials">
-            <li class="footer__social-icon">vk</li>
-            <li class="footer__social-icon">tw</li>
-            <li class="footer__social-icon">fb</li>
+            <li class="footer__social-item">
+                <a href="https://vk.com/chocho364" class="footer__social-link"></a><img src="images/gh.png" alt="VK"></li>
+            <li class="footer__social-item"><a href="https://github.com/SeregaBB" class="footer__social-link"><img src="images/gh.png" alt="FB"></a></li>
+            <li class="footer__social-item">
+                <a href="https://facebook.com" class="footer__social-icon"><img src="images/fb.png" alt="Facebook"></a></li>
         </ul>
     </footer>
     <script type="module" src="main/main.ab0dcde76bdc6234be7b.js"></script>
