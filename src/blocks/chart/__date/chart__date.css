@@ -1,11 +1,11 @@
 .chart__date {
-    margin: 0 0 56px 0;
-    height: 24px;
+    margin: 0 0 3.89vw 0;
+    height: 1.67vw;
     box-sizing: border-box;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 1.25vw;
 }
 
 .chart__date:last-child {

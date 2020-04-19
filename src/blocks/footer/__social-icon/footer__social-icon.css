@@ -1,7 +1,7 @@
+@import url('_type/footer__social-icon_type-fb.css');
+@import url('_type/footer__social-icon_type-gh.css');
+@import url('_type/footer__social-icon_type-vk.css');
 .footer__social-icon {
-    margin: 0 25px 0 0;
-}
-
-.footer__social-icon:last-child {
-    margin: 0;
+    width: 21px;
+    cursor: pointer;
 }

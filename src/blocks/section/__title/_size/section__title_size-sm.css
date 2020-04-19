@@ -1,3 +1,9 @@
 .section__title_size-sm {
-    width: 344px;
+    width: 23.89vw;
+}
+
+@media screen and (max-width: 320px) {
+    .section__title_size-sm {
+        width: 90vw;
+    }
 }

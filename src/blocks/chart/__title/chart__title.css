@@ -1,3 +1,5 @@
 .chart__title {
-    margin: 0 0 48px;
+    margin: 0 0 3.33vw;
+    font-size: 1.81vw;
+    line-height: 2.08vw;
 }

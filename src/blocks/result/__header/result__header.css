@@ -1,8 +1,22 @@
 .result__header {
     display: flex;
-    margin: 0 auto 64px;
-    width: 80%;
+    margin: 0 auto 4.44vw;
+    width: 90vw;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+@media screen and (max-width: 769px) {
+    .result__header {
+        margin: 0 auto 4.17vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .result__header {
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: flex-start;
+    }
 }

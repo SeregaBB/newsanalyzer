@@ -1,9 +1,18 @@
 .section__title {
-    margin: 0 192px 24px 0;
+    margin: 0 13.33vw 1.67vw 0;
     align-self: baseline;
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
-    line-height: 46px;
+    font-size: 2.78vw;
+    line-height: 3.19vw;
+}
+
+@media screen and (max-width: 320px) {
+    .section__title {
+        width: 90vw;
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0 0 16px;
+    }
 }

@@ -1,11 +1,12 @@
 .history__card {
-    width: 400px;
-    height: 288px;
+    width: 27.78vw;
+    min-height: 19.58vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     background: #fff;
-    border-radius: 16px;
-    padding: 24px 24px 0px;
-    margin: 0 16px 48px;
+    border-radius: 1.11vw;
+    padding: 1.67vw 1.67vw 0px;
+    margin: 0 0.56vw 3.33vw;
+    box-sizing: border-box;
 }

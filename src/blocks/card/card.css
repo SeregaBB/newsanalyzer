@@ -5,10 +5,15 @@
 @import url('__description/card__description.css');
 @import url('__link/card__link.css');
 .card {
-    width: 400px;
-    height: 576px;
+    width: 100%;
     background: #fff;
     border-radius: 4%;
     overflow: hidden;
     box-shadow: 0 0 10px #e6e8ea;
+}
+
+@media screen and (max-width: 320px) {
+    .card:last-child {
+        margin: 0 0 13px;
+    }
 }

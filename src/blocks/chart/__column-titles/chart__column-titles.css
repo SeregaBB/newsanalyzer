@@ -1,12 +1,12 @@
 .chart__column-titles {
     display: flex;
     flex-direction: row;
-    margin: 0 0 24px;
+    margin: 0 0 1.67vw;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 0.83vw;
+    line-height: 1.11vw;
     letter-spacing: 0.4px;
     text-transform: uppercase;
     color: #B6BCBF;

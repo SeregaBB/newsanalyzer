@@ -1,9 +1,24 @@
 .subtitle {
-    margin: 0 0 64px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
     color: #FFFFFF;
+    margin: 0 0 4.44vw;
+    font-size: 1.25vw;
+    line-height: 1.67vw;
+}
+
+@media screen and (max-width: 769px) {
+    .subtitle {
+        font-size: 2.34vw;
+        line-height: 3.13vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .subtitle {
+        font-size: 20px;
+        line-height: 26px;
+        margin: 0 0 24px;
+    }
 }

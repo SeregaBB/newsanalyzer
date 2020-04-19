@@ -1,8 +1,9 @@
 .analytics__go-home {
-    margin: 0 0 80px;
+    margin: 0 0 5.56vw;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1.25vw;
+    line-height: 1.67vw;
+    color: #b6bcbf;
 }

@@ -1,0 +1,14 @@
+.header__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 85.58vw;
+    margin: 0 auto;
+    align-items: baseline;
+}
+
+@media screen and (max-width: 769px) {
+    .header__container {
+        width: 89.5vw;
+    }
+}

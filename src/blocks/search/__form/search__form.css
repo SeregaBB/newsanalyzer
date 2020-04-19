@@ -1,7 +1,6 @@
 .search__form {
-    width: 608px;
-    min-height: 64px;
-    margin: 0 auto 80px;
+    width: 100%;
+    min-height: 3.89vw;
     position: relative;
     border-radius: 100px;
 }

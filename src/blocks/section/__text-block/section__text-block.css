@@ -1,3 +1,17 @@
 .section__text-block {
-    width: 600px;
+    width: 41.67vw;
+    align-self: flex-start;
+    margin: 51px 0 0 0;
+}
+
+@media screen and (max-width: 768px) {
+    .section__text-block {
+        width: 55.21vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .section__text-block {
+        width: 90vw;
+    }
 }

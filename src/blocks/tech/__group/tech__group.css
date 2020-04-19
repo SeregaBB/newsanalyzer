@@ -1,8 +1,24 @@
 .tech__group {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 88px);
-    grid-column-gap: 72px;
+    grid-template-columns: repeat(auto-fill, 6.39vw);
+    grid-column-gap: 5vw;
     align-self: baseline;
-    margin: 0 0 97px;
-    width: 45%;
+    width: 45vw;
+}
+
+@media screen and (max-width: 768px) {
+    .tech__group {
+        grid-template-columns: repeat(4, 88px);
+        grid-column-gap: 96px;
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .tech__group {
+        grid-template-columns: repeat(2, 102px);
+        grid-column-gap: 32px;
+        width: 80vw;
+        margin: auto;
+    }
 }

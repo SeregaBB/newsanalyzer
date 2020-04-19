@@ -1,11 +1,11 @@
 .chart__column {
-    height: 24px;
-    margin: 0 0 56px 0;
+    height: 1.67vw;
+    margin: 0 0 3.89vw 0;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 0.83vw;
+    line-height: 1.11vw;
     display: flex;
     align-items: center;
     letter-spacing: 0.4px;

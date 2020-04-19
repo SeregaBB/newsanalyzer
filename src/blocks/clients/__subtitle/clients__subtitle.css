@@ -1,0 +1,16 @@
+.clients__subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25vw;
+    line-height: 1.67vw;
+    width: 56.6vw;
+}
+
+@media screen and (max-width: 320px) {
+    .clients__subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        width: 90vw;
+    }
+}
