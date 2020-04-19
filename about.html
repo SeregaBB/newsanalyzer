@@ -5,24 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewsAnalyzer | About</title>
-    <link rel="stylesheet" href="about/style.1f9ca8d9582e5b4be478.css">
+    <link rel="stylesheet" href="about/style.3238118dd1cfd92672a5.css">
 </head>
 
 <body>
-    <header class="header">
-        <span class="header__logo">NewsAnalyzer</span>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="index.html" class="header__nav-link">Главная</a></li>
-                <li class="header__nav-item header__nav-item_is-black-active"><a href="about.html" class="header__nav-link">О проекте</a></li>
-            </ul>
-        </nav>
+    <header class="header header_margin-sm">
+        <div class="header__container">
+            <span class="header__logo">NewsAnalyzer</span>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="index.html" class="header__nav-link">Главная</a></li>
+                    <li class="header__nav-item header__nav-item_is-black-active"><a href="about.html" class="header__nav-link">О проекте</a></li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
 
     <section class="section clients">
         <div class="section__text-block section__text-block_size-large">
             <h2 class="section__title">Клиентам</h2>
-            <h3 class="section__subtitle">
+            <h3 class="clients__subtitle">
                 Этот сайт — дипломный проект студента Яндкс.Практикума. Его цель — показать, чему научился студент, и какими технологиями владеет. Вёртска сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы
                 и функциальность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать. Карточки с новостям приходят с сервера и обрабатываются асихронно. То есть сайт продолжает работать, пока от
                 сервера приходит ответ. Это повышает удобство использования сервиса. При создании проекта была использона сборка технологией Webpack. Это современных подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также
@@ -64,7 +67,7 @@
             <a href="https://github.com/SeregaBB/newsanalyzer" class="history__gh">Открыть в GitHub &gt;</a>
         </div>
 
-        <div class="history__cards" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "groupCell" : 1}'>
+        <div class="history__cards" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "groupCell" : 1, "percentPosition": true, "fade": true}'>
             <div class="history__card">
                 <time class="history__date">14 августа, 2019</time>
                 <div class="history__card-header">
@@ -153,18 +156,19 @@
         <span class="copyright">&copy;2109 SergeyLysanov</span>
         <nav class="footer__nav">
             <ul class="footer__nav-list">
-                <li class="footer__nav-item">Главная</li>
-                <li class="footer__nav-item">О проекте</li>
-                <li class="footer__nav-item">Яндекс.Практикум</li>
+                <li class="footer__nav-item"><a class="footer__nav-link">Главная</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link">О проекте</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link">Яндекс.Практикум</a></li>
             </ul>
         </nav>
         <ul class="footer__socials">
-            <li class="footer__social-icon">vk</li>
-            <li class="footer__social-icon">tw</li>
-            <li class="footer__social-icon">fb</li>
+            <li class="footer__social-item">
+                <a href="https://vk.com/chocho364" class="footer__social-link"><img class="footer__social-icon" src="./images/vk.png" alt="VK"></a></li>
+            <li class="footer__social-item"><a href="https://github.com/SeregaBB" class="footer__social-link"><img class="footer__social-icon" src="./images/gh.png" class="footer__social-img" alt="FB"></a></li>
+            <li class="footer__social-item">
+                <a href="https://facebook.com" class="footer__social-link"><img class="footer__social-icon" src="./images/fb.png" alt="Facebook"></a></li>
         </ul>
     </footer>
-
     <script src="about/about.28415d891c9ca5b5cd34.js"></script>
 </body>
 
