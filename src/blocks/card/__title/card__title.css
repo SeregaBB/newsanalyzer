@@ -2,17 +2,17 @@
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.81vw;
-    line-height: 2.08vw;
+    font-size: 26px;
+    line-height: 30px;
     color: #1A1B22;
-    margin: 0 0 1.11vw;
+    margin: 0 0 16px;
 }
 
 @media screen and (max-width: 768px) {
     .card__title {
-        line-height: 2.34vw;
-        font-size: 2.86vw;
-        margin: 0 0 1.3vw;
+        line-height: 22px;
+        font-size: 24px;
+        margin: 0 0 10px;
     }
 }
 

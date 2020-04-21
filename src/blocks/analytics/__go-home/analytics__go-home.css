@@ -1,9 +1,15 @@
 .analytics__go-home {
-    margin: 0 0 5.56vw;
+    margin: 0 0 80px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.25vw;
-    line-height: 1.67vw;
+    font-size: 18px;
+    line-height: 24px;
     color: #b6bcbf;
+}
+
+@media screen and (max-width: 768px) {
+    .analytics__go-home {
+        margin: 0 0 64px;
+    }
 }

@@ -10,5 +10,17 @@
 @import url('__author-name/history__author-name.css');
 @import url('__author-mail/history__author-mail.css');
 .history {
-    padding: 5vw 0 5.56vw 0;
+    padding: 72px 0 80px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .history {
+        padding: 40px 0 40px 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .history {
+        padding: 32px 16px 112px;
+    }
 }

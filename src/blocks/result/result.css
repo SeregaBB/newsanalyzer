@@ -13,3 +13,7 @@
     justify-content: center;
     align-items: center;
 }
+
+.result {
+    padding: 40px 0 0 0;
+}

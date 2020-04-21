@@ -1,5 +1,14 @@
 .chart__title {
-    margin: 0 0 3.33vw;
-    font-size: 1.81vw;
-    line-height: 2.08vw;
+    width: 100%;
+    margin: 0 0 48px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .chart__title {
+        font-size: 26px;
+        line-height: 30px;
+        margin: 0 0 49px;
+    }
 }

@@ -1,7 +1,12 @@
 .card__bottom {
-    padding: 1.39vw 1.67vw 1.67vw;
+    padding: 20px 24px 24px;
 }
-
+@media screen and (max-width: 768px){
+    .card__bottom {
+        height: 36%;
+        padding: 16px;
+    }
+}
 @media screen and (max-width: 320px) {
     .card__bottom {
         padding: 0 16px 20px;

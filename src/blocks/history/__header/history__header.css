@@ -1,8 +1,22 @@
 .history__header {
     display: flex;
-    margin: 0 auto 4.44vw;
-    width: 80%;
+    margin: 0 auto 64px;
+    width: 85%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .history__header {
+        margin: 0 auto 32px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .history__header {
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: flex-start;
+    }
 }

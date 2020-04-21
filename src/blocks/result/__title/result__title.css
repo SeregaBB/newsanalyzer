@@ -10,8 +10,8 @@
 
 @media screen and (max-width: 769px) {
     .result__title {
-        font-size: 3.91vw;
-        line-height: 4.43vw;
+        font-size: 30px;
+        line-height: 34px;
     }
 }
 

@@ -2,11 +2,13 @@
 @import url('__name/tech__name.css');
 @import url('__logo/tech__logo.css');
 @import url('__tech/tech__tech.css');
+@import url('__logo/_size/tech__logo_size-large.css');
 .tech {
-    padding: 5.56vw 7.2%;
+    padding: 80px 7.3% 97px;
 }
 
-
-@media screen and (max-width: 320px) {
-    .tech {}
+@media screen and (max-width: 768px) {
+    .tech {
+        padding: 40px 40px 49px;
+    }
 }

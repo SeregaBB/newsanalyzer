@@ -2,8 +2,35 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 1.25vw;
-    line-height: 1.67vw;
+    font-size: 18px;
+    line-height: 24px;
     color: #1A1B22;
     text-decoration: none;
+}
+
+.history__gh:after {
+    content: " >";
+}
+
+@media screen and (max-width: 768px) {
+    .history__gh {}
+}
+
+@media screen and (max-width: 320px) {
+    .history__gh {
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        width: 288px;
+        margin-left: -144px;
+        height: 56px;
+        border-radius: 80px;
+        border: 1px solid #1A1B22;
+        text-align: center;
+        padding-top: 15px;
+        box-sizing: border-box;
+    }
+    .history__gh:after {
+        content: "";
+    }
 }

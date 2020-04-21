@@ -1,16 +1,14 @@
 .header__logo {
-    padding-bottom: 1.81vw;
+    padding-bottom: 26px;
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: bold;
-    font-size: 1.39vw;
-    line-height: 1.67vw;
+    font-size: 20px;
+    line-height: 24px;
 }
 
 @media screen and (max-width: 768px) {
     .header__logo {
-        font-size: 20px;
-        line-height: 24px;
         padding-bottom: 18px;
     }
 }

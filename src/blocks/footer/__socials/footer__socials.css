@@ -5,6 +5,12 @@
     padding: 0;
 }
 
+@media screen and (max-width: 768px) {
+    .footer__socials {
+        align-self: flex-end;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .footer__socials {
         align-self: flex-end;

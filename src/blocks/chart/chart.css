@@ -12,5 +12,11 @@
 @import url('__column-container/chart__column-container.css');
 @import url('__column-titles/chart__column-titles.css');
 .chart {
-    padding: 5.56vw 7.2%;
+    padding: 80px 7.3%;
+}
+
+@media screen and (max-width: 768px) {
+    .chart {
+        padding: 40px;
+    }
 }

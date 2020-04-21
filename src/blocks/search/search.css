@@ -6,11 +6,17 @@
 .search {
     background-image: url('../../images/background.png');
     background-size: cover;
-    padding-bottom: 5.56vw;
+    padding-bottom: 80px;
 }
 
 @media screen and (max-width: 768px) {
     .search {
         padding-bottom: 6.25vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search {
+        padding-bottom: 32px;
     }
 }

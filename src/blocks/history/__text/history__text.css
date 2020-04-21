@@ -7,3 +7,10 @@
     color: #1A1B22;
     width: 100%
 }
+
+@media screen and (max-width: 768px) {
+    .history__text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

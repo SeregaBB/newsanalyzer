@@ -7,3 +7,11 @@
     line-height: 2.08vw;
     color: #1A1B22;
 }
+
+@media screen and (max-width: 768px) {
+    .history__author-name {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0;
+    }
+}

@@ -2,13 +2,13 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 85.58vw;
+    max-width: 85.58%;
     margin: 0 auto;
     align-items: baseline;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
     .header__container {
-        width: 89.5vw;
+        max-width: 89.5%;
     }
 }

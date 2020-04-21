@@ -6,8 +6,16 @@
     line-height: 1.67vw;
     text-align: center;
     letter-spacing: 0.2px;
-    width: 6.39vw;
+    width: 100%;
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .tech__name {
+        font-size: 18px;
+        line-height: 24px;
+        width: 120px;
+    }
 }
 
 @media screen and (max-width: 320px) {

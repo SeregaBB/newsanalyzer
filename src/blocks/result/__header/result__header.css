@@ -1,15 +1,15 @@
 .result__header {
     display: flex;
-    margin: 0 auto 4.44vw;
-    width: 90vw;
+    margin: 0 auto 64px;
+    width: 85%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
     .result__header {
-        margin: 0 auto 4.17vw;
+        margin: 0 auto 32px;
     }
 }
 

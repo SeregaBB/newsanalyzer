@@ -1,6 +1,6 @@
 .search__input {
     width: 100%;
-    height: 4.44vw;
+    height: 100%;
     padding-left: 1.67vw;
     font-family: Roboto;
     font-style: normal;
@@ -24,6 +24,13 @@
     box-shadow: 0 0 13px #2F71E5;
     -webkit-box-shadow: 0 0 13px #2F71E5;
     display: block;
+}
+
+@media screen and (max-width: 786px) {
+    .search__input {
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 
 @media screen and (max-width: 320px) {

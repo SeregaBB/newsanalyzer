@@ -1,8 +1,13 @@
 .author {
-    padding: 5.56vw 7.22vw;
+    padding: 80px 104px;
     flex-wrap: nowrap;
 }
 
+@media screen and (max-width: 768px) {
+    .author {
+        padding: 40px;
+    }
+}
 @media screen and (max-width: 320px) {
     .author {
         flex-wrap: wrap;

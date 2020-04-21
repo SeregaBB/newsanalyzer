@@ -1,12 +1,12 @@
 .section__text-block {
-    width: 41.67vw;
+    width: 600px;
     align-self: flex-start;
     margin: 51px 0 0 0;
 }
 
 @media screen and (max-width: 768px) {
     .section__text-block {
-        width: 55.21vw;
+        width: 424px;
     }
 }
 

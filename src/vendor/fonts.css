@@ -5,6 +5,9 @@
 
 @font-face {
     font-family: 'Roboto';
+    font-weight: normal;
+    font-style: normal;
+    color: #1a1b22;
     src: url("../vendor/fonts/roboto-regular.woff") format("woff");
 }
 

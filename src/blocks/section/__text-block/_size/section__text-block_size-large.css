@@ -1,4 +1,16 @@
 .section__text-block_size-large {
     width: 100%;
-    margin: 0 0 4.44vw;
+    margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .section__text-block_size-large {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section__text-block_size-large {
+        margin: 0;
+    }
 }

@@ -113,6 +113,13 @@ https://flickity.metafizzy.co
     left: 10px;
 }
 
+@media screen and (max-width: 320px) {
+    .flickity-prev-next-button.previous,
+    .flickity-prev-next-button.next {
+        display: none;
+    }
+}
+
 .flickity-prev-next-button .flickity-button-icon {
     position: absolute;
     left: 20%;
@@ -127,7 +134,7 @@ https://flickity.metafizzy.co
 .flickity-page-dots {
     position: absolute;
     width: 100%;
-    bottom: -1.74vw;
+    bottom: 0;
     padding: 0;
     margin: 0;
     list-style: none;

@@ -11,3 +11,11 @@
 .chart__date:last-child {
     margin: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .chart__date {
+        font-size: 18px;
+        margin: 0 0 56px 0;
+        height: 24px;
+    }
+}

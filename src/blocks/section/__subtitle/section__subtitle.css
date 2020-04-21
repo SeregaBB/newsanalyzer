@@ -4,18 +4,16 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
-    width: 41.67vw;
+    width: 100%;
 }
 
 .section__subtitle:last-child {
     margin: 0;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
     .section__subtitle {
-        margin: 0;
-        width: 90vw;
-        font-size: 18px;
-        line-height: 24px;
+        margin: 0
     }
 }

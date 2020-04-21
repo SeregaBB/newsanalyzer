@@ -4,15 +4,17 @@
     font-style: normal;
     font-weight: normal;
     color: #fff;
-    font-size: 4.17vw;
-    line-height: 4.44vw;
+    font-size: 60px;
+    line-height: 64px;
     width: 70%;
 }
 
 @media screen and (max-width: 769px) {
     .title {
-        font-size: 4.69vw;
-        line-height: 5.21vw;
+        font-size: 36px;
+        line-height: 40px;
+        width: 50%;
+        margin: 0 0 16px;
     }
 }
 

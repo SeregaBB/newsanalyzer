@@ -1,12 +1,25 @@
 .history__card {
-    width: 27.78vw;
-    min-height: 19.58vw;
+    width: 400px;
+    min-height: 242px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     background: #fff;
-    border-radius: 1.11vw;
-    padding: 1.67vw 1.67vw 0px;
-    margin: 0 0.56vw 3.33vw;
+    border-radius: 16px;
+    padding: 24px 24px 0;
     box-sizing: border-box;
+    margin: 0 16px 48px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .history__card {
+        width: 336px;
+        padding: 24px 24px 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .history__card {
+        width: 288px;
+    }
 }
