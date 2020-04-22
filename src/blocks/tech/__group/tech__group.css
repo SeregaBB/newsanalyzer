@@ -28,6 +28,12 @@
     }
 }
 
+@media screen and (max-width: 500px) {
+    .tech__group {
+        grid-template-columns: repeat(2, 102px);
+    }
+}
+
 @media screen and (max-width: 320px) {
     .tech__group {
         grid-template-columns: repeat(2, 102px);

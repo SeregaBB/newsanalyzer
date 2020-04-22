@@ -11,3 +11,9 @@
     text-transform: uppercase;
     color: #B6BCBF;
 }
+
+@media screen and (max-width: 320px) {
+    .chart__column-titles {
+        width: 100%;
+    }
+}

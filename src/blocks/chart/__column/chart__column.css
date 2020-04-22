@@ -25,3 +25,9 @@
         margin: 0 0 56px 0;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .chart__column {
+        margin: 0 0 24px 0;
+    }
+}

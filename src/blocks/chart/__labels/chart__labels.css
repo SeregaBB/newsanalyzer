@@ -5,3 +5,9 @@
     padding-left: 7.22vw;
     margin: 0 0 8px 0;
 }
+
+@media screen and (max-width: 320px) {
+    .chart__labels {
+        display: none;
+    }
+}
