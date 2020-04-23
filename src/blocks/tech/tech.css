@@ -1,0 +1,14 @@
+@import url('__group/tech__group.css');
+@import url('__name/tech__name.css');
+@import url('__logo/tech__logo.css');
+@import url('__tech/tech__tech.css');
+@import url('__logo/_size/tech__logo_size-large.css');
+.tech {
+    padding: 80px 7.3% 97px;
+}
+
+@media screen and (max-width: 768px) {
+    .tech {
+        padding: 40px 40px 49px;
+    }
+}

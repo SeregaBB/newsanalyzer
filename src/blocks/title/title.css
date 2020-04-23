@@ -1,0 +1,28 @@
+.title {
+    margin: 0 0 32px;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    color: #fff;
+    font-size: 60px;
+    line-height: 64px;
+    width: 70%;
+}
+
+@media screen and (max-width: 769px) {
+    .title {
+        font-size: 36px;
+        line-height: 40px;
+        width: 50%;
+        margin: 0 0 16px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .title {
+        font-size: 36px;
+        line-height: 40px;
+        width: 100%;
+        margin: 0 0 56px;
+    }
+}

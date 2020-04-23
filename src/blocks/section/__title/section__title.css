@@ -1,0 +1,26 @@
+.section__title {
+    margin: 0 0 24px;
+    align-self: baseline;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+}
+
+@media screen and (max-width: 768px) {
+    .section__title {
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0 0 16px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .section__title {
+        width: 90%;
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0 0 16px;
+    }
+}

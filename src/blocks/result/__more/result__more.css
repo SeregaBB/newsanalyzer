@@ -1,0 +1,35 @@
+.result__more {
+    background: #FFFFFF;
+    border-radius: 5.56vw;
+    width: 20vw;
+    padding: 1.39vw 4.44vw;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+        line-height: 24px;
+    margin: 0 0 5.56vw;
+    outline: none;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.result__more:hover {
+    opacity: .9;
+    transition: opacity 0.2s ease;
+    display: block;
+}
+@media screen and (max-width: 768px) {
+    .result__more {
+        width: 240px;
+        height: 56px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .result__more {
+        width: 90%;
+        padding: 15px 84px;
+    }
+}

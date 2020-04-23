@@ -1,0 +1,10 @@
+.chart__column-container {
+    width: calc(100% - 7.22vw);
+    height: 100%;
+}
+
+@media screen and (max-width: 320px) {
+    .chart__column-container {
+        width: calc(100% - 64px);
+    }
+}

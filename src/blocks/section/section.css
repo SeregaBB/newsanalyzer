@@ -1,0 +1,15 @@
+@import url('__text-block/section__text-block.css');
+@import url('__text-block/_size/section__text-block_size-large.css');
+@import url('__subtitle/section__subtitle.css');
+@import url('_color/section_color-grey.css');
+@import url('_item-position/section_item-position-center.css');
+@import url('_item-position/section_item-position-flex.css');
+@import url('__title/section__title.css');
+@import url('__title/_size/section__title_size-sm.css');
+@import url('_visibility/section_visibility-hidden.css');
+@import url('_no-padding/section_no-padding.css');
+.section {
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+}

@@ -1,0 +1,16 @@
+.history__text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.11vw;
+    line-height: 1.53vw;
+    color: #1A1B22;
+    width: 100%
+}
+
+@media screen and (max-width: 768px) {
+    .history__text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

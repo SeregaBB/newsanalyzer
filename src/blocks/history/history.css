@@ -1,0 +1,26 @@
+@import url('__header/history__header.css');
+@import url('__title/history__title.css');
+@import url('__gh/history__gh.css');
+@import url('__card/history__card.css');
+@import url('__text/history__text.css');
+@import url('__text-code/history__text-code.css');
+@import url('__date/history__date.css');
+@import url('__card-header/history__card-header.css');
+@import url('__avatar/history__avatar.css');
+@import url('__author-name/history__author-name.css');
+@import url('__author-mail/history__author-mail.css');
+.history {
+    padding: 72px 0 80px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .history {
+        padding: 40px 0 40px 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .history {
+        padding: 32px 16px 112px;
+    }
+}

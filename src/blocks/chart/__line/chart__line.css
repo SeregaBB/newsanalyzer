@@ -1,0 +1,14 @@
+.chart__line {
+    border-color: #1A1B22;
+    border-width: 1px;
+    margin: 0 0 1.11vw;
+}
+
+@media screen and (max-width: 320px) {
+    .chart__line {
+        margin: 0 0 18px;
+    }
+    .chart__line:last-child {
+        display: none;
+    }
+}

@@ -1,0 +1,10 @@
+.history__card-header {
+    display: flex;
+    margin: 0 0 17px;
+}
+
+@media screen and (max-width: 768px) {
+    .history__card-header {
+        margin: 0 0 16px;
+    }
+}

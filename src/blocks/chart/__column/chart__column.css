@@ -1,0 +1,33 @@
+.chart__column {
+    height: 1.67vw;
+    margin: 0 0 3.89vw 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.83vw;
+    line-height: 1.11vw;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 0;
+    background: #2F71E5;
+    padding-left: 6px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .chart__column {
+        height: 24px;
+        font-size: 12px;
+        line-height: 16px;
+        margin: 0 0 56px 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .chart__column {
+        margin: 0 0 24px 0;
+    }
+}

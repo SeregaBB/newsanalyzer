@@ -1,0 +1,28 @@
+.chart__date {
+    margin: 0 0 3.89vw 0;
+    height: 1.67vw;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25vw;
+}
+
+.chart__date:last-child {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .chart__date {
+        font-size: 18px;
+        margin: 0 0 56px 0;
+        height: 24px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .chart__date {
+        margin: 0 0 24px 0;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,27 @@
+.avatar {
+    width: 464px;
+    margin: 0 56px 80px 0;
+    border-radius: 1000px;
+    background: url('../../images/ava.jpg');
+    background-size: cover;
+}
+
+.avatar:before {
+    content: "";
+    padding-top: 100%;
+    float: left;
+}
+
+@media screen and (max-width: 768px) {
+    .avatar {
+        width: 232px;
+        margin: 0 32px 0 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .avatar {
+        width: 90vw;
+        margin: 0 0 24px;
+    }
+}

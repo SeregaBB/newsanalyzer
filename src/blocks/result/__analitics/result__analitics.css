@@ -1,0 +1,19 @@
+.result__analitics {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 769px) {
+    .result__analitics {}
+}
+
+@media screen and (max-width: 320px) {
+    .result__analitics {
+        margin: 0 0 40px;
+    }
+}

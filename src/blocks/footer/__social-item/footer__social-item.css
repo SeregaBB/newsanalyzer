@@ -1,0 +1,8 @@
+.footer__social-item {
+    margin: 0 1.74vw 0 0;
+    cursor: pointer;
+}
+
+.footer__social-item:last-child {
+    margin: 0;
+}

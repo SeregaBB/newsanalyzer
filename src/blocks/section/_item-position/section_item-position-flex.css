@@ -1,0 +1,5 @@
+.section_item-position-flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}

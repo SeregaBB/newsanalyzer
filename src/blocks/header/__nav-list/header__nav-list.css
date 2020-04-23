@@ -1,0 +1,9 @@
+.header__nav-list {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-self: center;
+    padding: 0;
+}

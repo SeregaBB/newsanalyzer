@@ -1,0 +1,26 @@
+@import url('__image/card__image.css');
+@import url('__bottom/card__bottom.css');
+@import url('__date/card__date.css');
+@import url('__title/card__title.css');
+@import url('__description/card__description.css');
+@import url('__link/card__link.css');
+.card {
+    width: 100%;
+    background: #fff;
+    border-radius: 4%;
+    overflow: hidden;
+    box-shadow: 0 0 10px #e6e8ea;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card:last-child {
+        margin: 0;
+    }
+}

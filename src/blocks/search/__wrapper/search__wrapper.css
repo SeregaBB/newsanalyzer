@@ -1,0 +1,22 @@
+.search__wrapper {
+    width: 42.22vw;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 769px) {
+    .search__wrapper {
+        width: 452px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search__wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search__wrapper {
+        width: calc(100% - 19px - 16px);
+    }
+}

@@ -1,0 +1,7 @@
+@import url('_type/footer__social-icon_type-fb.css');
+@import url('_type/footer__social-icon_type-gh.css');
+@import url('_type/footer__social-icon_type-vk.css');
+.footer__social-icon {
+    width: 21px;
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+@import url('__logo/header__logo.css');
+@import url('__nav-list/header__nav-list.css');
+@import url('__nav-item/header__nav-item.css');
+@import url('__nav-item/_is/header__nav-item_is-active.css');
+@import url('__nav-item/_is/header__nav-item_is-black-active.css');
+@import url('__nav-item/_color/header__nav-item_color-black.css');
+@import url('_margin/header_margin-sm.css');
+@import url('_color/header_color-white.css');
+@import url('__nav-item/_color/header__nav-item_color-white.css');
+@import url('__nav-link/header__nav-link.css');
+@import url('__container/header__container.css');
+.header {
+    position: relative;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    padding-top: 30px;
+    box-shadow: inset 0 -1px 0 #d1d2d6;
+    margin: 0 0 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding-top: 22px;
+        margin: 0 0 40px;
+    }
+}

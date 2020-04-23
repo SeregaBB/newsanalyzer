@@ -1,0 +1,18 @@
+.chart__label {
+    margin: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.83vw;
+    line-height: 1.11vw;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+}
+
+@media screen and (max-width: 768px) {
+    .chart__label {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

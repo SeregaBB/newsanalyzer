@@ -1,0 +1,10 @@
+.tech__tech {
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 320px) {
+    .tech__tech {
+        text-align: center;
+    }
+}

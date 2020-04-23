@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsAnalyzer</title>
+    <base href="newsanalyzer">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+
+<body>
+    <section class="section search">
+        <header class="header header_color-white">
+            <div class="header__container">
+                <span class="header__logo">NewsAnalyzer</span>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item header__nav-item_is-active header__nav-item_color-white"><a href="index.html" class="header__nav-link">Главная</a></li>
+                        <li class="header__nav-item header__nav-item_color-white"><a href="about.html" class="header__nav-link">О проекте</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        <div class="search__wrapper">
+            <div class="search__text">
+                <h1 class="title">Что в мире творится?</h1>
+                <h2 class="subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h2>
+            </div>
+
+            <form class="search__form">
+                <input type="text" name="query" class="search__input" placeholder="Введите тему новости" required>
+                <button class="search__button" type="button">Найти</button>
+            </form>
+        </div>
+
+
+
+
+    </section>
+
+
+    <section class="section section_color-grey section_item-position-center loading section_visibility-hidden">
+        <i class="preloader"></i>
+        <p class="loading__title">Идет поиск новостей...</p>
+    </section>
+
+    <section class="section section_color-grey section_item-position-center no-result section_visibility-hidden">
+        <img src="<%=require('../src/images/not-found.png').default%>" alt="Ничего не найдено" class="no-result__img">
+        <h2 class="no-result__title">Ничего не найдено</h2>
+        <h3 class="no-result__subtitle">К сожалению по вашему запросу ничего не найдено.</h3>
+    </section>
+
+    <section class="section section_color-grey result">
+        <div class="result__searching" style="display: none">
+            <i class="circle-preloader"></i>
+            <h3 class="result__search">Идет поиск новостей...</h3>
+        </div>
+
+        <div class="result__header">
+            <h2 class="result__title">Результаты поиска</h2>
+            <a href="analitycs.html" class="result__analitics">Посмотреть аналитику ></a>
+        </div>
+
+        <div class="result__cards">
+            <div class="card">
+                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
+                <div class="card__bottom">
+                    <span class="card__date">2 августа, 2019</span>
+                    <h2 class="card__title">Национальное достояние – парки</h2>
+                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="google.com" class="card__link">Google</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
+                <div class="card__bottom">
+                    <span class="card__date">2 августа, 2019</span>
+                    <h2 class="card__title">Национальное достояние – парки</h2>
+                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="google.com" class="card__link">Google</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
+                <div class="card__bottom">
+                    <span class="card__date">2 августа, 2019</span>
+                    <h2 class="card__title">Национальное достояние – парки</h2>
+                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="google.com" class="card__link">Google</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
+                <div class="card__bottom">
+                    <span class="card__date">2 августа, 2019</span>
+                    <h2 class="card__title">Национальное достояние – парки</h2>
+                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="google.com" class="card__link">Google</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
+                <div class="card__bottom">
+                    <span class="card__date">2 августа, 2019</span>
+                    <h2 class="card__title">Национальное достояние – парки</h2>
+                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="google.com" class="card__link">Google</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
+                <div class="card__bottom">
+                    <span class="card__date">2 августа, 2019</span>
+                    <h2 class="card__title">Национальное достояние – парки</h2>
+                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a href="google.com" class="card__link">Google</a>
+                </div>
+
+            </div>
+        </div>
+        <button class="result__more">Показать еще</button>
+    </section>
+
+    <section class="section section_item-position-flex author">
+        <div class="avatar"></div>
+        <div class="section__text-block">
+            <h2 class="section__title">Об авторе</h2>
+            <p class="section__subtitle">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.</p>
+            <p class="section__subtitle">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам. Если хотите, оставьте свои контакты: email и телефон. Так заказчики смогут с вами связаться.</p>
+        </div>
+    </section>
+
+
+
+
+    <footer class="footer">
+        <span class="copyright">&copy;2109 SergeyLysanov</span>
+        <nav class="footer__nav">
+            <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a href="index.html" class="footer__nav-link">Главная</a></li>
+                <li class="footer__nav-item"><a href="about.html" class="footer__nav-link">О проекте</a></li>
+                <li class="footer__nav-item"><a href="http://praktikum.yandex.ru" class="footer__nav-link" target="_blank">Яндекс.Практикум</a></li>
+            </ul>
+        </nav>
+        <ul class="footer__socials">
+            <li class="footer__social-item">
+                <a href="https://vk.com/chocho364" target="_blank" class="footer__social-link"><img class="footer__social-icon" src="<%=require('../src/images/vk.png').default%>" alt="VK"></a></li>
+            <li class="footer__social-item"><a href="https://github.com/SeregaBB" target="_blank" class="footer__social-link"><img class="footer__social-icon" src="<%=require('../src/images/gh.png').default%>" class="footer__social-img" alt="FB"></a></li>
+            <li class="footer__social-item">
+                <a href="https://facebook.com" class="footer__social-link" target="_blank"><img class="footer__social-icon" src="<%=require('../src/images/fb.png').default%>" alt="Facebook"></a></li>
+        </ul>
+    </footer>
+    <script type="module" src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+.history__avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 1000px;
+    margin: 0 1.11vw 0 0;
+}
+
+@media screen and (max-width: 768px) {
+    .history__avatar {
+        width: 48px;
+        height: 48px;
+        margin-right: 12px
+    }
+}
