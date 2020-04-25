@@ -1,7 +1,9 @@
-const form = document.forms.search;
+const FORM = document.forms.search;
 
 
-const api_key = '5aa78ed037b94a66bfd0a91d5bc55d5b';
-const month = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-const results = document.querySelector('.result__cards');
-export { form, api_key, month, results };
+const API_KEY = '5aa78ed037b94a66bfd0a91d5bc55d5b';
+const MONTH = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+const RESULTS = document.querySelector('.result__cards');
+const MORE_BUTTON = document.querySelector('.result__more');
+const LOADER = document.querySelector('.loading');
+export { FORM, API_KEY, MONTH, RESULTS, MORE_BUTTON, LOADER };

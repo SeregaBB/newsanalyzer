@@ -72,6 +72,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name]/style.[contenthash].css'
         }),
+
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),

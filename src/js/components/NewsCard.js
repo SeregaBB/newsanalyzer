@@ -1,4 +1,4 @@
-import { month } from '../constants/constants';
+import { MONTH } from '../constants/constants';
 
 export default class NewsCard {
     constructor(cardData) {
@@ -10,9 +10,9 @@ export default class NewsCard {
     createCard() {
         const date = new Date(this.cardData.publishedAt);
 
-        const cardTemplate = `<img src="${this.cardData.urlToImage ? this.cardData.urlToImage : '../images/noimage.png'}" alt="Телефон" class="card__image">
+        const cardTemplate = `<img src="${this.cardData.urlToImage ? this.cardData.urlToImage : '../images/background.png'}" alt="Картинка новости" class="card__image">
         <div class="card__bottom">
-            <span class="card__date">${date.getDate()} ${month[date.getMonth()]}, ${date.getFullYear()}</span>
+            <span class="card__date">${date.getDate()} ${MONTH[date.getMonth()]}, ${date.getFullYear()}</span>
             <h2 class="card__title">${this.cardData.title}</h2>
             <p class="card__description">${this.cardData.description}</p>
             <a href="${this.cardData.url}" class="card__link" target="_blank">${this.cardData.source.name}</a>
