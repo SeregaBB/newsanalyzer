@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewsAnalyzer</title>
     <base href="newsanalyzer">
-    <link rel="stylesheet" href="main/style.02d10adb624211cd772d.css">
+    <link rel="stylesheet" href="main/style.d4d42dd8f5c533507114.css">
 </head>
 
 <body>
@@ -29,9 +29,10 @@
                 <h2 class="subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h2>
             </div>
 
-            <form class="search__form">
-                <input type="text" name="query" class="search__input" placeholder="Введите тему новости" required>
-                <button class="search__button" type="button">Найти</button>
+            <form class="search__form" name="search" novalidate>
+                <input type="text" name="query" minlength="3" class="search__input" placeholder="Введите тему новости" required>
+                <button class="search__button" type="submit">Найти</button>
+                <span class="error-text"></span>
             </form>
         </div>
 
@@ -52,7 +53,7 @@
         <h3 class="no-result__subtitle">К сожалению по вашему запросу ничего не найдено.</h3>
     </section>
 
-    <section class="section section_color-grey result">
+    <section class="section section_color-grey result result_display-none" id="result">
         <div class="result__searching" style="display: none">
             <i class="circle-preloader"></i>
             <h3 class="result__search">Идет поиск новостей...</h3>
@@ -64,71 +65,9 @@
         </div>
 
         <div class="result__cards">
-            <div class="card">
-                <img src="./images/background.png" alt="Телефон" class="card__image">
-                <div class="card__bottom">
-                    <span class="card__date">2 августа, 2019</span>
-                    <h2 class="card__title">Национальное достояние – парки</h2>
-                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="google.com" class="card__link">Google</a>
-                </div>
-            </div>
 
-            <div class="card">
-                <img src="./images/background.png" alt="Телефон" class="card__image">
-                <div class="card__bottom">
-                    <span class="card__date">2 августа, 2019</span>
-                    <h2 class="card__title">Национальное достояние – парки</h2>
-                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="google.com" class="card__link">Google</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-                <img src="./images/background.png" alt="Телефон" class="card__image">
-                <div class="card__bottom">
-                    <span class="card__date">2 августа, 2019</span>
-                    <h2 class="card__title">Национальное достояние – парки</h2>
-                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="google.com" class="card__link">Google</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-                <img src="./images/background.png" alt="Телефон" class="card__image">
-                <div class="card__bottom">
-                    <span class="card__date">2 августа, 2019</span>
-                    <h2 class="card__title">Национальное достояние – парки</h2>
-                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="google.com" class="card__link">Google</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="./images/background.png" alt="Телефон" class="card__image">
-                <div class="card__bottom">
-                    <span class="card__date">2 августа, 2019</span>
-                    <h2 class="card__title">Национальное достояние – парки</h2>
-                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="google.com" class="card__link">Google</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-                <img src="./images/background.png" alt="Телефон" class="card__image">
-                <div class="card__bottom">
-                    <span class="card__date">2 августа, 2019</span>
-                    <h2 class="card__title">Национальное достояние – парки</h2>
-                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="google.com" class="card__link">Google</a>
-                </div>
-
-            </div>
         </div>
-        <button class="result__more">Показать еще</button>
+        <button class="result__more" id="more">Показать еще</button>
     </section>
 
     <section class="section section_item-position-flex author">
@@ -160,7 +99,7 @@
                 <a href="https://facebook.com" class="footer__social-link" target="_blank"><img class="footer__social-icon" src="./images/fb.png" alt="Facebook"></a></li>
         </ul>
     </footer>
-    <script type="module" src="main/main.ab0dcde76bdc6234be7b.js"></script>
+    <script type="module" src="main/main.9c6e8349a32c5653def2.js"></script>
 </body>
 
 </html>
