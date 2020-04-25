@@ -1,0 +1,10 @@
+.error-text {
+    color: #ff0000;
+    width: 90%;
+    padding-left: 25px;
+    display: inline-block;
+    margin: 5px 0 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+}

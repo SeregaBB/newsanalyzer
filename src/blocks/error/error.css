@@ -1,0 +1,22 @@
+@keyframes err {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.error {
+    box-shadow: 0 0 10px #ff0000;
+    animation: err .5s linear;
+}

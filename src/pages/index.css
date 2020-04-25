@@ -16,3 +16,5 @@
 @import url('../blocks/chart/chart.css');
 @import url('../blocks/analytics/analytics.css');
 @import url('../blocks/author/author.css');
+@import url('../blocks/error/error.css');
+@import url('../blocks/error-text/error-text.css');
