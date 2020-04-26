@@ -24,7 +24,7 @@ export default class Analytics {
             let date = new Date(this.data[item].publishedAt)
             dates.push(`${date.getDate()}, ${DAYS[date.getDay() === 0 ? 6 : date.getDay() - 1]}`);
 
-            console.log(DAYS[date.getDay() - 1], date.getDay());
+
         }
         dates = dates.sort((a, b) => { return a - b });
 

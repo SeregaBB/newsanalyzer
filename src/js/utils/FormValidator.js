@@ -12,11 +12,10 @@ export default class FormValidator {
 
     addEventListener(...args) {
         this.form.addEventListener(...args);
-        console.log('set event listeners')
     }
 
     validate() {
-        console.log('validate');
+
 
         let isValid = this.inputs.every(
             (item) => {

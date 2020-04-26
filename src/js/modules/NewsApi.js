@@ -22,7 +22,7 @@ export default class NewsApi {
         const oldDate = new Date();
         oldDate.setDate(oldDate.getDate() - weekAgo);
 
-        console.log(date, oldDate);
+
         const year = date.getFullYear();
         const month = date.getMonth() + monthCorrector > 10 ? date.getMonth() + monthCorrector : `0${date.getMonth()+monthCorrector}`;
         const day = date.getDate() > 10 ? date.getDate() : `0${date.getDate() }`;

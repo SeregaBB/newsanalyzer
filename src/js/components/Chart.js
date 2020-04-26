@@ -29,7 +29,7 @@ export default class Chart {
             data.forEach((dataItem) => {
                 if (dataItem === item) num += 1;
             });
-            console.log(this.chart.querySelectorAll('.chart__column'));
+
             this.chart.querySelectorAll('.chart__column')[i].style.width = `${num}%`;
             this.chart.querySelectorAll('.chart__column')[i].textContent = num;
             i += 1;
