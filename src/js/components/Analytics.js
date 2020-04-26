@@ -9,15 +9,14 @@ export default class Analytics {
 
     _getNumTitle(query) {
         let num = 0;
-
         for (let item in this.data) {
             if (this.data[item].title.indexOf(query) > -1) num += 1;
         }
-
         return num;
-
     }
 
+    _getDates() {
 
+    }
 
 }

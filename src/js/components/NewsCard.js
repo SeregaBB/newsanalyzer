@@ -1,5 +1,5 @@
 import { MONTH } from '../constants/constants';
-
+import defaultImage from '../../images/noimage.png';
 export default class NewsCard {
     constructor(cardData) {
         this.cardData = cardData;
@@ -10,7 +10,7 @@ export default class NewsCard {
     createCard() {
         const date = new Date(this.cardData.publishedAt);
 
-        const cardTemplate = `<img src="${this.cardData.urlToImage ? this.cardData.urlToImage : '../images/background.png'}" alt="Картинка новости" class="card__image">
+        const cardTemplate = `<img src="${this.cardData.urlToImage ? this.cardData.urlToImage : defaultImage}" alt="Картинка новости" class="card__image">
         <div class="card__bottom">
             <span class="card__date">${date.getDate()} ${MONTH[date.getMonth()]}, ${date.getFullYear()}</span>
             <h2 class="card__title">${this.cardData.title}</h2>
