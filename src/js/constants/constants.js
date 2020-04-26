@@ -7,6 +7,7 @@ const RESULTS = document.querySelector('.result__cards');
 const MORE_BUTTON = document.querySelector('.result__more');
 const LOADER = document.querySelector('.loading');
 const NO_RESULT = document.querySelector('.no-result__title');
-
+const CHART = document.querySelector('.chart');
 const GH_CARDS_CONTAINER = document.querySelector('.history__cards');
-export { FORM, API_KEY, MONTH, RESULTS, MORE_BUTTON, LOADER, NO_RESULT, GH_CARDS_CONTAINER };
+const DAYS = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+export { FORM, API_KEY, MONTH, RESULTS, MORE_BUTTON, LOADER, NO_RESULT, GH_CARDS_CONTAINER, CHART, DAYS };

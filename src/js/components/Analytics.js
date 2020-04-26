@@ -1,6 +1,9 @@
+import { DAYS } from '../constants/constants';
 export default class Analytics {
     constructor(data) {
         this.data = JSON.parse(data);
+
+        this._getDates = this._getDates.bind(this);
     }
 
     _getNumWeek() {
@@ -16,7 +19,16 @@ export default class Analytics {
     }
 
     _getDates() {
+        let dates = [];
+        for (let item in this.data) {
+            let date = new Date(this.data[item].publishedAt)
+            dates.push(`${date.getDate()}, ${DAYS[date.getDay() === 0 ? 6 : date.getDay() - 1]}`);
 
+            console.log(DAYS[date.getDay() - 1], date.getDay());
+        }
+        dates = dates.sort((a, b) => { return a - b });
+
+        return dates;
     }
 
 }
