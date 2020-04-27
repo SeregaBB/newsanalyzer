@@ -8,7 +8,7 @@ export default class Slider {
     }
 
     initSlider() {
-        let flkty = new Flickity(this.container, {
+        const flkty = new Flickity(this.container, {
             cellAlign: 'left',
             contain: true,
             groupCells: 1,

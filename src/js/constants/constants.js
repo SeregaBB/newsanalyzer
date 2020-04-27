@@ -10,4 +10,5 @@ const NO_RESULT = document.querySelector('.no-result__title');
 const CHART = document.querySelector('.chart');
 const GH_CARDS_CONTAINER = document.querySelector('.history__cards');
 const DAYS = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
-export { FORM, API_KEY, MONTH, RESULTS, MORE_BUTTON, LOADER, NO_RESULT, GH_CARDS_CONTAINER, CHART, DAYS };
+const CARDS_TO_LOAD = 3;
+export { FORM, API_KEY, MONTH, RESULTS, MORE_BUTTON, LOADER, NO_RESULT, GH_CARDS_CONTAINER, CHART, DAYS, CARDS_TO_LOAD };

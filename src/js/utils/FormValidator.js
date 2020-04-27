@@ -6,8 +6,8 @@ export default class FormValidator {
 
         this.addEventListener = this.addEventListener.bind(this);
         this.validate = this.validate.bind(this);
-        this.highlightError = this.highlightError.bind(this);
-        this.resetError = this.resetError.bind(this);
+        this._highlightError = this._highlightError.bind(this);
+        this._resetError = this._resetError.bind(this);
     }
 
     addEventListener(...args) {
@@ -27,23 +27,23 @@ export default class FormValidator {
             });
 
         if (isValid) {
-            this.resetError();
+            this._resetError();
             return true;
         } else {
-            this.highlightError();
+            this._highlightError();
             return false
         }
 
 
     }
 
-    highlightError() {
+    _highlightError() {
         this.form.classList.contains('error') ?
             undefined : this.form.classList.add('error');
 
     }
 
-    resetError() {
+    _resetError() {
         this.form.classList.contains('error') ?
             this.form.classList.remove('error') : undefined;
     }

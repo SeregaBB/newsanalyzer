@@ -2,27 +2,31 @@ export default class Chart {
     constructor(chart) {
         this.chart = chart;
         this.dateContainer = this.chart.querySelector('.chart__date-container');
+        this.chartDates = this.dateContainer.querySelectorAll('.chart__date');
+        this.chartColumns = this.chart.querySelectorAll('.chart__column');
+
         this.setDates = this.setDates.bind(this);
         this.setChartColumn = this.setChartColumn.bind(this);
     }
 
     setDates(dates) {
-        let set = new Set(dates);
-
+        const set = new Set(dates);
+        console.log(set, dates);
         let i = 0;
         set.forEach((item) => {
-
-            this.dateContainer.querySelectorAll('.chart__date')[i].textContent = `${item}`;
+            if (i === 7) return;
+            this.chartDates[i].textContent = `${item}`;
             i += 1;
         });
 
     }
 
     setChartColumn(data) {
-        let set = new Set(data);
+        const set = new Set(data);
         let i = 0;
 
         set.forEach(item => {
+            if (i === 7) return;
             let num = 0;
 
 
@@ -30,8 +34,8 @@ export default class Chart {
                 if (dataItem === item) num += 1;
             });
 
-            this.chart.querySelectorAll('.chart__column')[i].style.width = `${num}%`;
-            this.chart.querySelectorAll('.chart__column')[i].textContent = num;
+            this.chartColumns[i].style.width = `${num}%`;
+            this.chartColumns[i].textContent = num;
             i += 1;
         });
 

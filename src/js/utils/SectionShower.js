@@ -2,23 +2,23 @@ export default class SectionShower {
     constructor(container) {
         this.container = container;
 
-        this._clearContainer = this._clearContainer.bind(this);
-        this._showContainer = this._showContainer.bind(this);
-        this._hideContainer = this._hideContainer.bind(this);
+        this.clearContainer = this.clearContainer.bind(this);
+        this.showContainer = this.showContainer.bind(this);
+        this.hideContainer = this.hideContainer.bind(this);
     }
 
-    _clearContainer() {
+    clearContainer() {
         while (this.container.hasChildNodes()) {
             this.container.removeChild(this.container.childNodes[0]);
         }
     }
 
-    _showContainer() {
+    showContainer() {
         this.container.parentNode.classList.contains('section_visibility-hidden') ? this.container.parentNode.classList.remove('section_visibility-hidden') :
             undefined;
     }
 
-    _hideContainer() {
+    hideContainer() {
         this.container.parentNode.classList.contains('section_visibility-hidden') ? undefined : this.container.parentNode.classList.add('section_visibility-hidden');
     }
 }

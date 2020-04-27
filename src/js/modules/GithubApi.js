@@ -8,8 +8,8 @@ export default class GithubApi {
         return fetch('https://api.github.com/repos/SeregaBB/newsanalyzer/commits')
             .then(res => {
                 if (res.ok) return res.json();
-                Promise.reject();
+                return Promise.reject();
             })
-            .catch(err => err);
+
     }
 }

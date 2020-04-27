@@ -1,6 +1,6 @@
 import '../pages/index.css';
 import FormValidator from './utils/FormValidator';
-import { FORM, API_KEY, RESULTS, MORE_BUTTON, LOADER, NO_RESULT } from './constants/constants';
+import { FORM, API_KEY, RESULTS, MORE_BUTTON, LOADER, NO_RESULT, CARDS_TO_LOAD } from './constants/constants';
 import '../js/modules/NewsApi';
 import NewsApi from '../js/modules/NewsApi';
 import '../js/components/Search';
@@ -28,20 +28,17 @@ let cardsArray = [];
 searchInput.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    localStorage.setItem('query', search.getVal());
-
-    resultContainer._clearContainer();
-
+    resultContainer.clearContainer();
 
     if (formValidator.validate()) {
-        loader._showBlock();
+        loader.showBlock();
         api.getNews(search.getVal())
             .then((res) => {
                 if (res.totalResults) {
-
+                    localStorage.setItem('query', search.getVal());
                     localStorage.setItem('result', JSON.stringify(res.articles));
-                    noResultContainer._hideContainer();
-                    resultContainer._showContainer();
+                    //noResultContainer.hideContainer();
+                    resultContainer.showContainer();
 
                     createCardsDom(res.articles);
                     return;
@@ -49,14 +46,18 @@ searchInput.addEventListener('submit', (event) => {
                 throw new Error('нет новостей');
             })
             .then(() => {
-                loader._hideBlock();
+                loader.hideBlock();
             })
             .finally(() => {
-                loader._hideBlock();
+                loader.hideBlock();
             })
             .catch((err) => {
-                resultContainer._hideContainer();
-                noResultContainer._showContainer();
+
+                //напоминалка. сюда впилить проверку что за ошибка, если просто ничо не найдено - показать no-result, 
+                //если что-то с апи или интернетом, показать ошибку (кастомную)
+
+                resultContainer.hideContainer();
+                noResultContainer.showContainer();
             })
     }
 })
@@ -69,8 +70,8 @@ searchInput.addEventListener('submit', (event) => {
 
 
 function createCardsDom(data) {
-    for (let item in data) {
-        let card = new NewsCard(data[item]).createCard();
+    for (const item in data) {
+        const card = new NewsCard(data[item]).createCard();
         cardsArray.push(card);
     }
     appendCardsToDom();
@@ -78,7 +79,7 @@ function createCardsDom(data) {
 
 function appendCardsToDom() {
     if (cardsArray.length) {
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < CARDS_TO_LOAD; i++) {
             if (cardsArray[i]) {
                 RESULTS.appendChild(cardsArray[i]);
                 cardsArray = cardsArray.slice(1);

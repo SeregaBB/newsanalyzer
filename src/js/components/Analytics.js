@@ -3,14 +3,14 @@ export default class Analytics {
     constructor(data) {
         this.data = JSON.parse(data);
 
-        this._getDates = this._getDates.bind(this);
+        this.getDates = this.getDates.bind(this);
     }
 
-    _getNumWeek() {
+    getNumWeek() {
         return this.data.length
     }
 
-    _getNumTitle(query) {
+    getNumTitle(query) {
         let num = 0;
         for (let item in this.data) {
             if (this.data[item].title.indexOf(query) > -1) num += 1;
@@ -18,11 +18,11 @@ export default class Analytics {
         return num;
     }
 
-    _getDates() {
+    getDates() {
         let dates = [];
-        for (let item in this.data) {
-            let date = new Date(this.data[item].publishedAt)
-            dates.push(`${date.getDate()}, ${DAYS[date.getDay() === 0 ? 6 : date.getDay() - 1]}`);
+        for (const item in this.data) {
+            const date = new Date(this.data[item].publishedAt)
+            dates.push(`${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`);
 
 
         }
