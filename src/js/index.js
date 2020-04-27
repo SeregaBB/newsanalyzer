@@ -9,9 +9,11 @@ import NewsCard from '../js/components/NewsCard';
 import Loader from '../js/components/Loader';
 import SearchInput from './components/SearchInput';
 import SectionShower from './utils/SectionShower';
+import NewsCardList from './components/NewsCardList';
+import FormDisabler from './utils/FormDisabler';
 
 
-
+const formDisabler = new FormDisabler(FORM);
 const formValidator = new FormValidator(FORM);
 const api = new NewsApi({ 'apiKey': API_KEY });
 const search = new Search(FORM);
@@ -19,15 +21,36 @@ const loader = new Loader(LOADER);
 const searchInput = new SearchInput(FORM);
 const resultContainer = new SectionShower(RESULTS);
 const noResultContainer = new SectionShower(NO_RESULT);
+const newsCardList = new NewsCardList(RESULTS, MORE_BUTTON)
+const hasSavedData = localStorage.getItem('result');
 let cardsArray = [];
 
 
 
+if (hasSavedData) {
+    let promise = new Promise((resolve) => {
+
+            loader.showBlock();
+            createCardsDom(JSON.parse(hasSavedData));
+            resolve();
+        })
+        .then(() => {
+            loader.hideBlock();
+            resultContainer.showContainer();
+        })
+}
 
 
-searchInput.addEventListener('submit', (event) => {
+
+searchInput.addEventListener('submit', submitHandler);
+
+
+
+
+
+function submitHandler(event) {
     event.preventDefault();
-
+    formDisabler.disableForm();
     resultContainer.clearContainer();
 
     if (formValidator.validate()) {
@@ -37,7 +60,7 @@ searchInput.addEventListener('submit', (event) => {
                 if (res.totalResults) {
                     localStorage.setItem('query', search.getVal());
                     localStorage.setItem('result', JSON.stringify(res.articles));
-                    //noResultContainer.hideContainer();
+                    noResultContainer.hideContainer();
                     resultContainer.showContainer();
 
                     createCardsDom(res.articles);
@@ -46,6 +69,7 @@ searchInput.addEventListener('submit', (event) => {
                 throw new Error('нет новостей');
             })
             .then(() => {
+                formDisabler.enableForm();
                 loader.hideBlock();
             })
             .finally(() => {
@@ -53,25 +77,22 @@ searchInput.addEventListener('submit', (event) => {
             })
             .catch((err) => {
 
-                //напоминалка. сюда впилить проверку что за ошибка, если просто ничо не найдено - показать no-result, 
-                //если что-то с апи или интернетом, показать ошибку (кастомную)
 
-                resultContainer.hideContainer();
-                noResultContainer.showContainer();
+                if (err == 'Error: нет новостей') {
+                    resultContainer.hideContainer();
+                    noResultContainer.showContainer();
+                    return;
+                }
+                console.log(err);
+
             })
     }
-})
-
-
-
-
-
-
+}
 
 
 function createCardsDom(data) {
-    for (const item in data) {
-        const card = new NewsCard(data[item]).createCard();
+    for (const item of data) {
+        const card = new NewsCard(item).createCard();
         cardsArray.push(card);
     }
     appendCardsToDom();

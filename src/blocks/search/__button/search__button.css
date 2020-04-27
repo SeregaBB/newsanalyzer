@@ -26,6 +26,11 @@
     background: #2A65CC;
 }
 
+.search__button:disabled {
+    background: #848989;
+    cursor: no-drop;
+}
+
 @media screen and (max-width: 768px) {
     .search__button {
         width: 160px;
