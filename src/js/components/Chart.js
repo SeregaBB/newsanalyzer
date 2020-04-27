@@ -1,3 +1,5 @@
+import { END_OF_WEEK } from "../constants/constants";
+
 export default class Chart {
     constructor(chart) {
         this.chart = chart;
@@ -10,27 +12,27 @@ export default class Chart {
     }
 
     setDates(dates) {
-        const set = new Set(dates);
-        console.log(set, dates);
+        const set = new Set(dates.sortedDays);
         let i = 0;
         set.forEach((item) => {
-            if (i === 7) return;
-            this.chartDates[i].textContent = `${item}`;
+            if (i === END_OF_WEEK) return;
+            this.chartDates[i].textContent = `${item}, ${dates[item]}`;
             i += 1;
         });
 
     }
 
     setChartColumn(data) {
-        const set = new Set(data);
+        const set = new Set(data.sortedDays);
         let i = 0;
 
+
         set.forEach(item => {
-            if (i === 7) return;
+            if (i === END_OF_WEEK) return;
             let num = 0;
 
 
-            data.forEach((dataItem) => {
+            data.sortedDays.forEach((dataItem) => {
                 if (dataItem === item) num += 1;
             });
 

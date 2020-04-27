@@ -1,4 +1,4 @@
-import { MONTH } from '../constants/constants';
+import { MONTH, GH_CARD_TEMPLATE } from '../constants/constants';
 export default class GithubCard {
     constructor(cardData) {
         this.cardData = cardData;
@@ -6,22 +6,24 @@ export default class GithubCard {
 
     createCard() {
         const date = new Date(this.cardData.commit.author.date);
+        const cardDate = `${date.getDate()} ${MONTH[date.getMonth()]},${date.getFullYear()}`;
+        const img = this.cardData.author.avatar_url;
+        const authorName = this.cardData.commit.author.name;
+        const mailLink = `mailto:${this.cardData.commit.author.email}`;
+        const mailText = this.cardData.commit.author.email;
+        const historyText = this.cardData.commit.message;
 
-        const cardTemplate = `<time class="history__date">${date.getDate()} ${MONTH[date.getMonth()]},${date.getFullYear()}</time>
-        <div class="history__card-header">
-            <img src="${this.cardData.author.avatar_url}" alt="Аватар" class="history__avatar">
-            <div class="history__author">
-                <p class="history__author-name">${this.cardData.commit.author.name}</p>
-                <a href="mailto:${this.cardData.commit.author.email}" class="history__author-mail">${this.cardData.commit.author.email}</a>
-            </div>
-        </div>
-        <p class="history__text">
-        ${this.cardData.commit.message}
-        </p>
-    </div>`
         let div = document.createElement('div');
         div.className = 'history__card';
-        div.insertAdjacentHTML('beforeend', cardTemplate);
+        div.insertAdjacentHTML('beforeend', GH_CARD_TEMPLATE);
+
+        div.querySelector('.history__date').textContent = cardDate;
+        div.querySelector('.history__avatar').src = img;
+        div.querySelector('.history__author-name').textContent = authorName;
+        const mail = div.querySelector('.history__author-mail');
+        mail.href = mailLink;
+        mail.textContent = mailText;
+        div.querySelector('.history__text').textContent = historyText;
         return div;
     }
 }

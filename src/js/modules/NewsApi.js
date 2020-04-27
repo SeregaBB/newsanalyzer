@@ -8,7 +8,7 @@ export default class NewsApi {
         return fetch(`https://newsapi.org/v2/everything?q=${query}&${this.getDate()}&apiKey=${this.options.apiKey}`)
             .then((res) => {
                 if (res.ok) return res.json();
-                return Promise.reject();
+                return Promise.reject(res.statusText);
             });
     }
 

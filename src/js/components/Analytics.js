@@ -1,4 +1,4 @@
-import { DAYS } from '../constants/constants';
+import { DAYS, DAY_CORRECTOR, SUNDAY } from '../constants/constants';
 export default class Analytics {
     constructor(data) {
         this.data = JSON.parse(data);
@@ -19,16 +19,18 @@ export default class Analytics {
     }
 
     getDates() {
+
         let dates = [];
+        let datesAndDays = {};
         for (const item in this.data) {
             const date = new Date(this.data[item].publishedAt)
-            dates.push(`${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`);
-
+            datesAndDays[date.getDate()] = DAYS[date.getDay() - DAY_CORRECTOR < 0 ? SUNDAY : date.getDay() - DAY_CORRECTOR];
+            dates.push(date.getDate());
 
         }
         dates = dates.sort((a, b) => { return a - b });
-
-        return dates;
+        datesAndDays.sortedDays = dates;
+        return datesAndDays;
     }
 
 }

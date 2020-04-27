@@ -1,4 +1,4 @@
-import { MONTH } from '../constants/constants';
+import { MONTH, NEWS_CARD_TEMPLATE } from '../constants/constants';
 import defaultImage from '../../images/noimage.png';
 export default class NewsCard {
     constructor(cardData) {
@@ -9,17 +9,24 @@ export default class NewsCard {
 
     createCard() {
         const date = new Date(this.cardData.publishedAt);
+        const imgSrc = this.cardData.urlToImage ? this.cardData.urlToImage : defaultImage;
+        const cardDate = `${date.getDate()} ${MONTH[date.getMonth()]}, ${date.getFullYear()}`;
+        const title = this.cardData.title;
+        const description = this.cardData.description;
+        const linkHref = this.cardData.url;
+        const linkText = this.cardData.source.name;
 
-        const cardTemplate = `<img src="${this.cardData.urlToImage ? this.cardData.urlToImage : defaultImage}" alt="Картинка новости" class="card__image">
-        <div class="card__bottom">
-            <span class="card__date">${date.getDate()} ${MONTH[date.getMonth()]}, ${date.getFullYear()}</span>
-            <h2 class="card__title">${this.cardData.title}</h2>
-            <p class="card__description">${this.cardData.description}</p>
-            <a href="${this.cardData.url}" class="card__link" target="_blank">${this.cardData.source.name}</a>
-        </div>`
         let div = document.createElement('div');
         div.className = 'card';
-        div.insertAdjacentHTML('beforeend', cardTemplate);
+        div.insertAdjacentHTML('beforeend', NEWS_CARD_TEMPLATE);
+
+        div.querySelector('.card__image').src = imgSrc;
+        div.querySelector('.card__date').textContent = cardDate;
+        div.querySelector('.card__title').textContent = title;
+        div.querySelector('.card__description').textContent = description;
+        const link = div.querySelector('.card__link');
+        link.href = linkHref;
+        link.textContent = linkText;
         return div;
     }
 }

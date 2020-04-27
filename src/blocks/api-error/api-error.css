@@ -1,0 +1,30 @@
+@keyframes slide {
+    from {
+        top: -60px
+    }
+    to {
+        top: 0px
+    }
+}
+
+.api-error {
+    position: fixed;
+    top: -60px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    background: #ec5353;
+    z-index: 1;
+    box-shadow: 0 0 10px #1f1b22;
+    padding-top: 10px;
+    color: white;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.api-error_is-showed {
+    animation: slide .2s linear;
+    top: 0px;
+}
