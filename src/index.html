@@ -7,9 +7,11 @@
     <title>NewsAnalyzer</title>
     <base href="newsanalyzer">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <link rel="shortcut icon" href="<%=require('../src/images/main.png').default%>" type="image/x-icon">
 </head>
 
 <body>
+    <div class="api-error"></div>
     <section class="section search">
         <header class="header header_color-white">
             <div class="header__container">
@@ -29,9 +31,10 @@
                 <h2 class="subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h2>
             </div>
 
-            <form class="search__form">
-                <input type="text" name="query" class="search__input" placeholder="Введите тему новости" required>
-                <button class="search__button" type="button">Найти</button>
+            <form class="search__form" name="search" novalidate>
+                <input type="text" name="query" minlength="3" class="search__input" placeholder="Введите тему новости" required>
+                <button class="search__button" type="submit">Найти</button>
+                <span class="error-text"></span>
             </form>
         </div>
 
@@ -52,7 +55,7 @@
         <h3 class="no-result__subtitle">К сожалению по вашему запросу ничего не найдено.</h3>
     </section>
 
-    <section class="section section_color-grey result">
+    <section class="section section_color-grey result section_visibility-hidden" id="result">
         <div class="result__searching" style="display: none">
             <i class="circle-preloader"></i>
             <h3 class="result__search">Идет поиск новостей...</h3>
@@ -64,71 +67,9 @@
         </div>
 
         <div class="result__cards">
-            <div class="card">
-                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
-                <div class="card__bottom">
-                    <span class="card__date">2 августа, 2019</span>
-                    <h2 class="card__title">Национальное достояние – парки</h2>
-                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="google.com" class="card__link">Google</a>
-                </div>
-            </div>
 
-            <div class="card">
-                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
-                <div class="card__bottom">
-                    <span class="card__date">2 августа, 2019</span>
-                    <h2 class="card__title">Национальное достояние – парки</h2>
-                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="google.com" class="card__link">Google</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
-                <div class="card__bottom">
-                    <span class="card__date">2 августа, 2019</span>
-                    <h2 class="card__title">Национальное достояние – парки</h2>
-                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="google.com" class="card__link">Google</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
-                <div class="card__bottom">
-                    <span class="card__date">2 августа, 2019</span>
-                    <h2 class="card__title">Национальное достояние – парки</h2>
-                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="google.com" class="card__link">Google</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
-                <div class="card__bottom">
-                    <span class="card__date">2 августа, 2019</span>
-                    <h2 class="card__title">Национальное достояние – парки</h2>
-                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="google.com" class="card__link">Google</a>
-                </div>
-
-            </div>
-
-            <div class="card">
-                <img src="<%=require('../src/images/background.png').default%>" alt="Телефон" class="card__image">
-                <div class="card__bottom">
-                    <span class="card__date">2 августа, 2019</span>
-                    <h2 class="card__title">Национальное достояние – парки</h2>
-                    <p class="card__description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                    <a href="google.com" class="card__link">Google</a>
-                </div>
-
-            </div>
         </div>
-        <button class="result__more">Показать еще</button>
+        <button class="result__more" id="more">Показать еще</button>
     </section>
 
     <section class="section section_item-position-flex author">

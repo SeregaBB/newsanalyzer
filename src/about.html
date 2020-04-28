@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewsAnalyzer | About</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
+    <link rel="shortcut icon" href="<%=require('../src/images/about.png').default%>" type="image/x-icon">
 </head>
 
 <body>
+    <div class="api-error"></div>
     <header class="header header_margin-sm">
         <div class="header__container">
             <span class="header__logo">NewsAnalyzer</span>
@@ -91,11 +93,11 @@
             <a href="https://github.com/SeregaBB/newsanalyzer" class="history__gh" target="_blank">Открыть в GitHub</a>
         </div>
 
-        <div class="history__cards" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "groupCell" : 1, "percentPosition": true, "fade": true}'>
+        <div class="history__cards">
             <div class="history__card">
                 <time class="history__date">14 августа, 2019</time>
                 <div class="history__card-header">
-                    <img src="<%=require('../src/images/ava.jpg').default%>" alt="Аватар" class="history__avatar">
+                    <img src="./images/ava.jpg" alt="Аватар" class="history__avatar">
                     <div class="history__author">
                         <p class="history__author-name">Сергей Лысанов</p>
                         <a href="mailto:test@test.ru" class="history__author-mail">test@test.ru</a>
@@ -106,73 +108,8 @@
                 </p>
             </div>
 
-            <div class="history__card">
-                <time class="history__date">14 августа, 2019</time>
-                <div class="history__card-header">
-                    <img src="<%=require('../src/images/ava.jpg').default%>" alt="Аватар" class="history__avatar">
-                    <div class="history__author">
-                        <p class="history__author-name">Сергей Лысанов</p>
-                        <a href="mailto:test@test.ru" class="history__author-mail">test@test.ru</a>
-                    </div>
-                </div>
-                <p class="history__text">
-                    Emmet (formerly Zen Coding) is a <span class="history__text-code">web- developer’s toolkit that can greatly improve</span> your HTML & CSS workflow.
-                </p>
-            </div>
 
-            <div class="history__card">
-                <time class="history__date">14 августа, 2019</time>
-                <div class="history__card-header">
-                    <img src="<%=require('../src/images/ava.jpg').default%>" alt="Аватар" class="history__avatar">
-                    <div class="history__author">
-                        <p class="history__author-name">Сергей Лысанов</p>
-                        <a href="mailto:test@test.ru" class="history__author-mail">test@test.ru</a>
-                    </div>
-                </div>
-                <p class="history__text">
-                    Emmet (formerly Zen Coding) is a <span class="history__text-code">web- developer’s toolkit that can greatly improve</span> your HTML & CSS workflow.
-                </p>
-            </div>
 
-            <div class="history__card">
-                <time class="history__date">14 августа, 2019</time>
-                <div class="history__card-header">
-                    <img src="<%=require('../src/images/ava.jpg').default%>" alt="Аватар" class="history__avatar">
-                    <div class="history__author">
-                        <p class="history__author-name">Сергей Лысанов</p>
-                        <a href="mailto:test@test.ru" class="history__author-mail">test@test.ru</a>
-                    </div>
-                </div>
-                <p class="history__text">
-                    Emmet (formerly Zen Coding) is a <span class="history__text-code">web- developer’s toolkit that can greatly improve</span> your HTML & CSS workflow.
-                </p>
-            </div>
-            <div class="history__card">
-                <time class="history__date">14 августа, 2019</time>
-                <div class="history__card-header">
-                    <img src="<%=require('../src/images/ava.jpg').default%>" alt="Аватар" class="history__avatar">
-                    <div class="history__author">
-                        <p class="history__author-name">Сергей Лысанов</p>
-                        <a href="mailto:test@test.ru" class="history__author-mail">test@test.ru</a>
-                    </div>
-                </div>
-                <p class="history__text">
-                    Emmet (formerly Zen Coding) is a <span class="history__text-code">web- developer’s toolkit that can greatly improve</span> your HTML & CSS workflow.
-                </p>
-            </div>
-            <div class="history__card">
-                <time class="history__date">14 августа, 2019</time>
-                <div class="history__card-header">
-                    <img src="<%=require('../src/images/ava.jpg').default%>" alt="Аватар" class="history__avatar">
-                    <div class="history__author">
-                        <p class="history__author-name">Сергей Лысанов</p>
-                        <a href="mailto:test@test.ru" class="history__author-mail">test@test.ru</a>
-                    </div>
-                </div>
-                <p class="history__text">
-                    Emmet (formerly Zen Coding) is a <span class="history__text-code">web- developer’s toolkit that can greatly improve</span> your HTML & CSS workflow.
-                </p>
-            </div>
         </div>
     </section>
 

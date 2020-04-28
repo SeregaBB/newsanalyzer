@@ -26,6 +26,10 @@
     display: block;
 }
 
+.search__input:disabled {
+    cursor: no-drop;
+}
+
 @media screen and (max-width: 786px) {
     .search__input {
         font-size: 16px;

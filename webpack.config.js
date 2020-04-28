@@ -10,8 +10,8 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 module.exports = {
     entry: {
         main: './src/js/index.js',
-        about: './src/js/about.js',
-        analitycs: './src/js/analitycs.js'
+        about: './src/about/index.js',
+        analitycs: './src/analytics/index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -72,6 +72,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name]/style.[contenthash].css'
         }),
+
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
