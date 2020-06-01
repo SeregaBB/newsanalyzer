@@ -30,7 +30,7 @@
                 <h1 class="title">Что в мире творится?</h1>
                 <h2 class="subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</h2>
             </div>
-
+            
             <form class="search__form" name="search" novalidate>
                 <input type="text" name="query" minlength="3" class="search__input" placeholder="Введите тему новости" required>
                 <button class="search__button" type="submit">Найти</button>
@@ -101,7 +101,20 @@
                 <a href="https://facebook.com" class="footer__social-link" target="_blank"><img class="footer__social-icon" src="<%=require('../src/images/fb.png').default%>" alt="Facebook"></a></li>
         </ul>
     </footer>
+    <div class="warning show" >Здравствуйте! В настоящий момент newsapi.org ограничил бесплатное использование своего api, поэтому сайт переезжает на другой api, из-за чего в данный момент вы можете оценить только вёрстку :( <br> Это окно закроется автоматически через <span class="secs">10</span>  секунд</div>
     <script type="module" src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+    <script>
+        let secs = document.querySelector('.secs');
+        let warn = document.querySelector('.warning');
+        inter = setInterval(()=>{
+            if (+secs.textContent === 0) {
+                clearInterval(inter);
+                warn.setAttribute('style','display: none');
+            }
+
+            secs.textContent = +secs.textContent - 1;
+        },1000)
+    </script>
 </body>
 
 </html>
