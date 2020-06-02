@@ -1,6 +1,6 @@
 .tech__group {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 120px);
+    grid-template-columns: repeat(auto-fill, 100px);
     grid-column-gap: 40px;
     align-self: baseline;
     width: 50%;

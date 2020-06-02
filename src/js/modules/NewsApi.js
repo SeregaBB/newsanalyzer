@@ -5,7 +5,7 @@ export default class NewsApi {
     }
 
     getNews(query) {
-        return fetch(`https://newsapi.org/v2/everything?q=${query}&${this.getDate()}&apiKey=${this.options.apiKey}`)
+        return fetch(`https://praktikum.tk/news/v2/everything?q=${query}&${this.getDate()}&apiKey=${this.options.apiKey}`)
             .then((res) => {
                 if (res.ok) return res.json();
                 return Promise.reject(res.statusText);
