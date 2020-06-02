@@ -101,20 +101,9 @@
                 <a href="https://facebook.com" class="footer__social-link" target="_blank"><img class="footer__social-icon" src="<%=require('../src/images/fb.png').default%>" alt="Facebook"></a></li>
         </ul>
     </footer>
-    <div class="warning show" >Здравствуйте! В настоящий момент newsapi.org ограничил бесплатное использование своего api, поэтому сайт переезжает на другой api, из-за чего в данный момент вы можете оценить только вёрстку :( <br> Это окно закроется автоматически через <span class="secs">10</span>  секунд</div>
+   
     <script type="module" src="<%=htmlWebpackPlugin.files.chunks.main.entry %>"></script>
-    <script>
-        let secs = document.querySelector('.secs');
-        let warn = document.querySelector('.warning');
-        inter = setInterval(()=>{
-            if (+secs.textContent === 0) {
-                clearInterval(inter);
-                warn.setAttribute('style','display: none');
-            }
-
-            secs.textContent = +secs.textContent - 1;
-        },1000)
-    </script>
+   
 </body>
 
 </html>
